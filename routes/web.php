@@ -15,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 // PUBLIC
 Route::get('/', function () {
-    return view('layouts.dashboards.app');
+    return view('index');
 });
 
-Route::get('data', 'DataController@index')->name('pages-data');
+Route::group(['prefix' => 'data'], function (){
+    Route::get('/', 'DataController@index')->name('pages-data');
+    Route::get('{query}', 'DataController@index')->name('pages-data-query');
+});
+
 Route::get('publikasi', 'PublikasiController@index')->name('pages-publikasi');
 Route::get('galery', 'GaleryController@index')->name('pages-galery');
 Route::get('infograpik', 'InfoGrapikController@index')->name('pages-infograpik');
