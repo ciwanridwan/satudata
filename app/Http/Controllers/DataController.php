@@ -14,8 +14,11 @@ class DataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($query = null)
+    public function index(Request $request, $query = null)
     {
+        if (!empty($request->q)) {
+            return redirect(url('data/' . $request->q));
+        }
         $data['query'] = null;
         if (!empty($query)) {
             $data['query'] = $query;
@@ -23,6 +26,7 @@ class DataController extends Controller
         $data['unit_kerja'] = UnitKerja::all();
         $data['tahun'] = Data::select(DB::raw('year(created_at) as year'), DB::raw('count(*) as total_data'))
         ->groupBy(DB::raw('year(created_at)'))->get();
+        list($data['datas'], $data['total']) = Data::search($query);
         return view('pages.dataset')->with($data);
     }
 
