@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// PUBLIC
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/', 'HomeController@index')->name('index');
 
 Route::group(['prefix' => 'data'], function (){
     Route::get('/', 'DataController@index')->name('pages-data');
