@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\UnitKerja;
+use App\Data;
+use DB;
 
 class DataController extends Controller
 {
@@ -11,9 +14,16 @@ class DataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($query = null)
     {
-        return view('pages.dataset');
+        $data['query'] = null;
+        if (!empty($query)) {
+            $data['query'] = $query;
+        }
+        $data['unit_kerja'] = UnitKerja::all();
+        $data['tahun'] = Data::select(DB::raw('year(created_at) as year'), DB::raw('count(*) as total_data'))
+        ->groupBy(DB::raw('year(created_at)'))->get();
+        return view('pages.dataset')->with($data);
     }
 
     /**

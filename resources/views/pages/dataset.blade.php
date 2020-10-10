@@ -1,143 +1,111 @@
 @extends('layouts.frontend.app')
 
 @section('content')
-    <!-- breadcrumb -->
-    <div role="main">
-        <div class="container-fluid background-datbase">
-            <div class="flash-messages">
-            </div>
-            <div class="toolbar">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Beranda</a></li>
-                        <li class="breadcrumb-item active"><a href="/dataset">Kumpulan Data</a></li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xl-4 col-12">
-                    <div class="filters">
-                        <div>
-                            <section class="module module-narrow module-shallow">
-                                <h5 class="module-heading">
-                                    <strong>Unit Kerja</strong>
-                                </h5>
-                                <nav>
-                                    <ul class="list-group">
-                                        <a href="/dataset?organization=pemerintah-provinsi-jawa-tengah" title="Pemerintah Provinsi Jawa Tengah">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p"> <strong> Sekretariat Jenderal </strong><span class="badge badge-primary badge-pill" style="float:right !important;">1230</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?organization=pemerintah-kota-semarang" title="Pemerintah Kota Semarang">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p"> <strong> Inspekturat Jendral </strong><span class="badge badge-primary badge-pill" style="float:right !important;">1485</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?organization=pemerintah-kabupaten-batang" title="Pemerintah Kabupaten Batang">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p"> <strong>Barenbang </strong><span class="badge badge-primary badge-pill" style="float:right !important;">500</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?organization=kantor-staf-presiden" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p"> <strong>Binalatas</strong> <span class="badge badge-primary badge-pill" style="float:right !important;">727</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?organization=pemerintah-kota-bandung" title="Pemerintah Kota Bandung">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p"> <strong>Binapenta & PKK</strong> <span class="badge badge-primary badge-pill" style="float:right !important;">487</span>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </nav>
-                                <p class="module-footer ericsnth-facet-showtext">
-                                    <small><b><a href="/dataset?_organization_limit=0" class="read-more">Lihat Lebih Banyak</a></b></small>
-                                </p>
-                            </section><br/>
-                            <section class="module module-narrow module-shallow">
-                                <h5 class="module-heading">
-                                    <strong>Label</strong>
-                                </h5>
-                                <nav>
-                                    <ul class="list-group">
-                                        <a href="/dataset?tags=2017" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">2020<span class="badge badge-primary badge-pill" style="float:right !important;">3674</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?tags=2015" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">2019<span class="badge badge-primary badge-pill" style="float:right !important;">1602</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?tags=2018" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">2018<span class="badge badge-primary badge-pill" style="float:right !important;">1446</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?tags=2014" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">2017<span class="badge badge-primary badge-pill" style="float:right !important;">1444</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?tags=2016" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">2016<span class="badge badge-primary badge-pill" style="float:right !important;">1329</span>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </nav>
-                                <p class="module-footer ericsnth-facet-showtext">
-                                    <small><strong><a href="/dataset?_tags_limit=0" class="read-more">Lihat Lebih Banyak Label</a></strong></small>
-                                </p>
-                            </section><br/>
-                            <section class="module module-narrow module-shallow">
-                                <h5 class="module-heading">
-                                    <strong>Jenis Data</strong>
-                                </h5>
-                                <nav>
-                                    <ul class="list-group">
-                                        <a href="/dataset?license_id=cc-by" title="Creative Commons Attribution">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Terbuka<span class="badge badge-primary badge-pill" style="float:right !important;">40762</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?license_id=cc-nc" title="Creative Commons Non-Commercial (Any)">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Semi-private<span class="badge badge-primary badge-pill" style="float:right !important;">1103</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?license_id=other-pd" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Khusus (Antar Kementrian)<span class="badge badge-primary badge-pill" style="float:right !important;">42</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?license_id=other-open" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Private Kemnaker<span class="badge badge-primary badge-pill" style="float:right !important;">1063</span>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </nav>
-                                <p class="module-footer ericsnth-facet-showtext">
-                                    <small><strong><a href="/dataset?_license_id_limit=0" class="read-more">Lihat Lebih Banyak  Data</a></strong></small>
-                                </p>
-                            </section><br/>
-                            <section class="module module-narrow module-shallow">
-                                <h5 class="module-heading">
-                                    <strong>Format Berkas</strong>
-                                </h5>
-                                <nav>
-                                    <ul class="list-group">
-                                        <a href="/dataset?res_format=CSV" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">CSV<span class="badge badge-primary badge-pill" style="float:right !important;">19895</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?res_format=XLSX" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">XLSX<span class="badge badge-primary badge-pill" style="float:right !important;">8914</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?res_format=PDF" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">PDF<span class="badge badge-primary badge-pill" style="float:right !important;">5681</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?res_format=XLS" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">XLS<span class="badge badge-primary badge-pill" style="float:right !important;">5462</span>
-                                            </li>
-                                        </a>
-                                        <a href="/dataset?res_format=DOCX" title="">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">DOCX<span class="badge badge-primary badge-pill" style="float:right !important;">739</span>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </nav>
+<!-- breadcrumb -->
+<div role="main">
+    <div class="container-fluid background-datbase">
+        <div class="flash-messages">
+        </div>
+        <div class="toolbar">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Beranda</a></li>
+                    <li class="breadcrumb-item active"><a href="/dataset">Kumpulan Data</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xl-4 col-12">
+                <div class="filters">
+                    <div>
+                        <section class="module module-narrow module-shallow form-group">
+                            <h5 class="module-heading">
+                                <strong>Unit Kerja</strong>
+                            </h5>
+                            <nav>
+                                <ul class="list-group">
+                                    @foreach($unit_kerja as $key => $value)
+                                    <a href="#" title="{{ $value->nama }}">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">
+                                            <strong> {{ $value->nama }} </strong>
+                                            <span class="badge badge-primary badge-pill" style="float:right !important;">{{ $value->total_data }}</span>
+                                        </li>
+                                    </a>
+                                    @endforeach
+                                </ul>
+                            </nav>
+                        </section>
+                        <section class="module module-narrow module-shallow form-group">
+                            <h5 class="module-heading">
+                                <strong>Tahun</strong>
+                            </h5>
+                            <nav>
+                                <ul class="list-group">
+                                    @foreach($tahun as $key => $value)
+                                    <a href="#" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">{{ $value->year }}<span class="badge badge-primary badge-pill" style="float:right !important;">{{ $value->total_data }}</span>
+                                        </li>
+                                    </a>
+                                    @endforeach
+                                </ul>
+                            </nav>
+                        </section>
+                        <section class="module module-narrow module-shallow">
+                            <h5 class="module-heading">
+                                <strong>Jenis Data</strong>
+                            </h5>
+                            <nav>
+                                <ul class="list-group">
+                                    <a href="/dataset?license_id=cc-by" title="Creative Commons Attribution">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Terbuka<span class="badge badge-primary badge-pill" style="float:right !important;">40762</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?license_id=cc-nc" title="Creative Commons Non-Commercial (Any)">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Semi-private<span class="badge badge-primary badge-pill" style="float:right !important;">1103</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?license_id=other-pd" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Khusus (Antar Kementrian)<span class="badge badge-primary badge-pill" style="float:right !important;">42</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?license_id=other-open" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">Data Private Kemnaker<span class="badge badge-primary badge-pill" style="float:right !important;">1063</span>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </nav>
+                            <p class="module-footer ericsnth-facet-showtext">
+                                <small><strong><a href="/dataset?_license_id_limit=0" class="read-more">Lihat Lebih Banyak  Data</a></strong></small>
+                            </p>
+                        </section><br/>
+                        <section class="module module-narrow module-shallow">
+                            <h5 class="module-heading">
+                                <strong>Format Berkas</strong>
+                            </h5>
+                            <nav>
+                                <ul class="list-group">
+                                    <a href="/dataset?res_format=CSV" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">CSV<span class="badge badge-primary badge-pill" style="float:right !important;">19895</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?res_format=XLSX" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">XLSX<span class="badge badge-primary badge-pill" style="float:right !important;">8914</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?res_format=PDF" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">PDF<span class="badge badge-primary badge-pill" style="float:right !important;">5681</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?res_format=XLS" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">XLS<span class="badge badge-primary badge-pill" style="float:right !important;">5462</span>
+                                        </li>
+                                    </a>
+                                    <a href="/dataset?res_format=DOCX" title="">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ericsnth-facet-p">DOCX<span class="badge badge-primary badge-pill" style="float:right !important;">739</span>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </nav>
                                 <!-- <p class="module-footer ericsnth-facet-showtext">
                                     <small><strong><a href="/dataset?_res_format_limit=0" class="read-more">Lihat Lebih Banyak Format Berkas</a></strong></small>
                                 </p> -->
@@ -150,7 +118,7 @@
                         <div class="module-content">
                             <form id="dataset-search-form" class="search-form" method="get">
                                 <div class="input-group input-group-lg">
-                                    <input aria-label="Masukan kata kunci pencarian" id="field-giant-search" type="text" class="form-control form-lg" name="q" aria-describedby="button-addon2" value="" autocomplete="off" placeholder="Masukan kata kunci pencarian">
+                                    <input aria-label="{{ !empty($query) ? $query : 'Masukan kata kunci pencarian' }}" id="field-giant-search" type="text" class="form-control form-lg" name="q" aria-describedby="button-addon2" value="" autocomplete="off" placeholder="{{ !empty($query) ? $query : 'Masukan kata kunci pencarian' }}">
                                 </div><br/>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -262,13 +230,13 @@
                                     </li>
                                 </ul>
                             </div>
-                    </section>
-                    <section class="module">
-                        <div class="module-content">
-                        </div>
-                    </section>
+                        </section>
+                        <section class="module">
+                            <div class="module-content">
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
         </div>
-@endsection
+        @endsection

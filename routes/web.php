@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublikasiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -13,12 +14,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// PUBLIC
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/', 'HomeController@index')->name('index');
+
+Route::group(['prefix' => 'data'], function (){
+    Route::get('/', 'DataController@index')->name('pages-data');
+    Route::get('{query}', 'DataController@index')->name('page-data-query');
 });
 
-Route::get('data', 'DataController@index')->name('pages-data');
 Route::get('publikasi', 'PublikasiController@index')->name('pages-publikasi');
 Route::get('galery', 'GaleryController@index')->name('pages-galery');
 Route::get('infograpik', 'InfoGrapikController@index')->name('pages-infograpik');
