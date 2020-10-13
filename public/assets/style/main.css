@@ -10980,20 +10980,19 @@ footer .hak-cipta p {
 }
 
 .jumbotron {
-  background-image: url("/assets/images/home/jumbotron-bg.jpg");
+  background-image: url("/assets//images/home/jumbotron-bg.jpg");
   background-size: cover;
   opacity: 1;
   width: 100%;
-  height: 620px;
+  height: 600px;
   color: #ffffff;
 }
 
-.jumbotron .display-4 {
-  text-align: left;
-  font-weight: 200;
-  letter-spacing: 1.44px;
-  opacity: 1;
-  margin-top: 100px;
+@media (min-width: 992px) {
+  .jumbotron .form-group {
+    width: 550px;
+    margin: auto;
+  }
 }
 
 .nav-flow {
@@ -11058,7 +11057,7 @@ footer .hak-cipta p {
   .benefit .benefit-bg-3 {
     width: 100%;
     height: 650px;
-    background-image: url("/assets/images/home/benefit-bg3.png");
+    background-image: url("/assets//images/home/benefit-bg3.png");
     background-size: cover;
     margin-left: 769px;
   }
@@ -11066,7 +11065,7 @@ footer .hak-cipta p {
 
 .flow-tenant {
   text-align: center;
-  background-image: url("/assets/images/home/benefit-bg1.jpg");
+  background-image: url("/assets//images/home/benefit-bg1.jpg");
   color: #ffffff;
 }
 
@@ -11088,6 +11087,17 @@ footer .hak-cipta p {
   width: 130px;
   height: auto;
   border-radius: 100%;
+}
+
+.card {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.card:hover {
+  margin-top: -15px;
 }
 
 .produk {
@@ -11172,7 +11182,7 @@ footer .hak-cipta p {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #15406a;
+  background-color: #cc2c0c;
 }
 
 .berita .card:hover {
@@ -11250,7 +11260,7 @@ footer {
 }
 
 .data-pencarian {
-  background-color: #002d58;
+  background-color: #cc2c0c;
   color: #ffffff;
   height: 630px;
 }
@@ -11287,6 +11297,10 @@ footer {
   border-radius: 6px;
   opacity: 1;
   font-size: 12px;
+}
+
+.produk .card-produk {
+  color: #15406a;
 }
 
 .produk h2 {
@@ -11400,7 +11414,7 @@ footer {
 }
 
 .background-datbase {
-  background-color: #12446e !important;
+  background-color: #cc2c0c !important;
   color: white;
   padding-top: 30px;
 }
@@ -11449,5 +11463,30 @@ footer {
 
 .footer-bottom {
   margin-top: -25px;
+}
+
+.tentang-page {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.tentang-page .nav-pills {
+  background-color: #e62020;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tentang-page .nav-pills .nav-link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tentang-page .nav-pills a {
+  color: #ffffff;
+}
+
+.tentang-page .nav-pills .active {
+  background-color: #9c1010;
 }
 /*# sourceMappingURL=main.css.map */
