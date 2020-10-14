@@ -15,7 +15,7 @@ class CreateKetenagakerjaansTable extends Migration
     {
         Schema::create('ketenagakerjaans', function (Blueprint $table) {
             $table->id();
-            $table->string('isi');
+            $table->string('nama');
             $table->string('kategori');
             $table->timestamps();
         });
