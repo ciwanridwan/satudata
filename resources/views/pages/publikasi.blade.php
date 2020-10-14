@@ -1,4 +1,4 @@
-@extends('layouts.frontend.app')
+@extends('layouts.frontend.app', ['footerPage' => 'footer'])
 
 @section('content')
 <div role="main">
@@ -28,11 +28,9 @@
                                     <label for="inputPassword" class="col-md-2 col-form-label">Tahun :</label>
                                     <div class="col-md-5">
                                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                        <option selected>2020</option>
-                                        <option value="1">2019</option>
-                                        <option value="2">2018</option>
-                                        <option value="3">2017</option>
-                                    </select>
+                                            <option value="">Pilih Tahun</option>
+                                            <option value="">2020</option>
+                                        </select>
                                     </div>
                                 </div>
                             </form>
@@ -41,7 +39,8 @@
                                 <div class="col-12 row">
                                     <label for="inputPassword" class="col-md-2 col-form-label">Kata Kunci :</label>
                                     <div class="col-md-5">
-                                        <input type="password" class="form-control" id="InputKataKunci" placeholder="kata kunci">
+                                        <input type="password" class="form-control" id="InputKataKunci"
+                                            placeholder="kata kunci">
                                     </div>
                                     <a href="" class="btn btn-success">cari publikasi</a>
                                 </div>
@@ -51,7 +50,8 @@
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
                                         <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success" style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <a href="" class="btn btn-success"
+                                            style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
                                     <div class="col-10">
                                         <p><strong>Kenaikan Angka Kerja 2019</strong></p>
@@ -59,16 +59,21 @@
                                         <br>
                                         <small>Ukuran FIle : <span>11 mb</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18 juta orang, naik 2,24 juta orang dibandingkan Februari
+                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
+                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
+                                            juta orang, naik 2,24 juta orang dibandingkan Februari
                                             2018.
                                         </p>
                                     </div>
                                 </div>
-                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                <div id="eris"
+                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
+                                </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
                                         <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success" style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <a href="" class="btn btn-success"
+                                            style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
                                     <div class="col-9">
                                         <p><strong>Kenaikan Angka Kerja 2019</strong></p>
@@ -76,16 +81,21 @@
                                         <br>
                                         <small>Ukuran FIle : <span>11 mb</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18 juta orang, naik 2,24 juta orang dibandingkan Februari
+                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
+                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
+                                            juta orang, naik 2,24 juta orang dibandingkan Februari
                                             2018.
                                         </p>
                                     </div>
                                 </div>
-                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                <div id="eris"
+                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
+                                </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
                                         <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success" style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <a href="" class="btn btn-success"
+                                            style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
                                     <div class="col-9">
                                         <p><strong>Kenaikan Angka Kerja 2019</strong></p>
@@ -93,16 +103,21 @@
                                         <br>
                                         <small>Ukuran FIle : <span>11 mb</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18 juta orang, naik 2,24 juta orang dibandingkan Februari
+                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
+                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
+                                            juta orang, naik 2,24 juta orang dibandingkan Februari
                                             2018.
                                         </p>
                                     </div>
                                 </div>
-                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                <div id="eris"
+                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
+                                </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
                                         <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success" style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <a href="" class="btn btn-success"
+                                            style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
                                     <div class="col-9">
                                         <p><strong>Kenaikan Angka Kerja 2019</strong></p>
@@ -110,16 +125,21 @@
                                         <br>
                                         <small>Ukuran FIle : <span>11 mb</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18 juta orang, naik 2,24 juta orang dibandingkan Februari
+                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
+                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
+                                            juta orang, naik 2,24 juta orang dibandingkan Februari
                                             2018.
                                         </p>
                                     </div>
                                 </div>
-                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                <div id="eris"
+                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
+                                </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
                                         <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success" style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <a href="" class="btn btn-success"
+                                            style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
                                     <div class="col-9">
                                         <p><strong>Kenaikan Angka Kerja 2019</strong></p>
@@ -127,16 +147,21 @@
                                         <br>
                                         <small>Ukuran FIle : <span>11 mb</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18 juta orang, naik 2,24 juta orang dibandingkan Februari
+                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
+                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
+                                            juta orang, naik 2,24 juta orang dibandingkan Februari
                                             2018.
                                         </p>
                                     </div>
                                 </div>
-                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                <div id="eris"
+                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
+                                </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
                                         <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success" style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <a href="" class="btn btn-success"
+                                            style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
                                     <div class="col-9">
                                         <p><strong>Kenaikan Angka Kerja 2019</strong></p>
@@ -144,19 +169,24 @@
                                         <br>
                                         <small>Ukuran FIle : <span>11 mb</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18 juta orang, naik 2,24 juta orang dibandingkan Februari
+                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
+                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
+                                            juta orang, naik 2,24 juta orang dibandingkan Februari
                                             2018.
                                         </p>
                                     </div>
                                 </div>
-                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                <div id="eris"
+                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
+                                </div>
                             </div>
-                            <br/>
+                            <br />
                             <div aria-label="Page navigation example ">
                                 <nav aria-label="...">
                                     <ul class="pagination d-flex justify-content-center">
                                         <li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                            <a class="page-link" href="#" tabindex="-1"
+                                                aria-disabled="true">Previous</a>
                                         </li>
                                         <li class="page-item active" aria-current="page">
                                             <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
@@ -175,9 +205,55 @@
                         <div class="module-content">
                         </div>
                     </section>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+@endsection
+
+@section('footer')
+<footer class="footer-bottom">
+    <div class="container">
+        <div class="row mt-4 mb-4 logo-footer">
+            <img src="{{ asset('/assets/images/logo-navbar.png')}}" alt="">
+        </div>
+        <div class="row alamat">
+            <div class="col-6">
+                <p>Jl. Jendral Gatot Subroto Kav. 51, Daerah Khusus <br>Ibukota Jakarta 12750, Indonesia</p>
+            </div>
+            <div class="col-6 icon-footer-left">
+                <a href=""><img src="{{ asset('/assets/images/icon-instagram.png')}}" alt=""></a>
+                <a href=""><img src="{{ asset('/assets/images/icon-facebook.png')}}" alt=""></a>
+                <a href=""><img src="{{ asset('/assets/images/icon-twiter.png')}}" alt=""></a>
+                <a href=""><img src="{{ asset('/assets/images/icon-youtube.png')}}" alt=""></a>
+            </div>
+        </div>
+        <div class="row info-perusahaan">
+            <div class="col-lg-3">
+                <p>Telp: 089-8765432</p>
+            </div>
+            <div class="col-lg-3">
+                <p>Call Center: 089-8765432</p>
+            </div>
+            <div class="col-lg-2">
+                <p>Tentang Satudata</p>
+            </div>
+            <div class="col-lg-2">
+                <p>Hubungi Kami</p>
+            </div>
+            <div class="col-lg-2">
+                <p>Peta Situs</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 garis-footer"></div>
+        </div>
+        <div class="row ">
+            <div class="col-12 hak-cipta">
+                <p>Kementrian Ketenagakerjaan Republik Indonesia C 2020 - Hak Cipta Dilindungi Undang-Undang</p>
+            </div>
+        </div>
+    </div>
+</footer>
 @endsection

@@ -19,11 +19,16 @@
 
 <body id="ericsnth">
     @include('layouts.frontend.header.header')
-    
+
     <!-- page content -->
     @yield('content')
     <!-- jumbotron -->
+    @if ($footerPage == 'footer')
+    @yield('footer')
+    @else
     @include('layouts.frontend.footer.footer')
+    @endif
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{asset('/assets/vendor/jquery/jquery.slim.min.js')}}"></script>

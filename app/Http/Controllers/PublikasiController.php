@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Publikasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PublikasiController extends Controller
 {
@@ -13,7 +15,10 @@ class PublikasiController extends Controller
      */
     public function index()
     {
-        return view('pages.publikasi');
+        $publikasi = Publikasi::paginate(10);
+        $tahun = Publikasi::whereYear('created_at', '>=', 2020)->get();
+        // dd($tahun);
+        return view('pages.publikasi')->with('publikasi', $publikasi)->with('tahun', $tahun);
     }
 
     /**

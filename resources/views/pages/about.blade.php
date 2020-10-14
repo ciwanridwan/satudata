@@ -1,4 +1,4 @@
-@extends('layouts.frontend.app')
+@extends('layouts.frontend.app', ['footerPage' => ''])
 
 @section('content')
 <div class="container tentang-page">

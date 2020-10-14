@@ -35,7 +35,7 @@
                     <b> <a class="nav-link" href="https://linda.kemnaker.go.id">Permintaan Data</a></b>
                 </li>
                 <li class="nav-item {{ Request::segment(1) == 'about' ? 'active' : null }} nav-item-left">
-                    <b> <a class="nav-link" href="{{ route('pages-about')}}">Gallery</a></b>
+                    <b> <a class="nav-link" href="{{ route('pages-about')}}">Tentang Kami</a></b>
                 </li>
             </ul>
             <!-- <ul class="navbar-nav ml-auto">
