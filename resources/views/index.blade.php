@@ -1,5 +1,8 @@
 @extends('layouts.frontend.app', ['footerPage' => ''])
 
+@section('title')
+    Beranda
+@endsection
 @section('content')
 <div class="jumbotron jumbotron-fluid page-content">
     <div class="container text-center" data-aos="zoom-in" data-aos-delay="800">
@@ -97,7 +100,7 @@
     <!-- detail berita -->
     <div class="row berita-details">
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
-            <a href="produk-details.html">
+            <a href="{{route('pages-details-galery')}}">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('/assets/images/news/news2.png')}}" alt="Card image cap">
                     <div class="card-body">
@@ -115,7 +118,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="300">
-            <a href="produk-details.html">
+            <a href="{{route('pages-details-galery')}}">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('/assets/images/news/news3.png')}}" alt="Card image cap">
                     <div class="card-body">
@@ -133,7 +136,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="400">
-            <a href="produk-details.html">
+            <a href="{{route('pages-details-galery')}}">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('/assets/images/news/news1.png')}}" alt="Card image cap">
                     <div class="card-body">

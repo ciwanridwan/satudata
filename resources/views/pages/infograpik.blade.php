@@ -1,5 +1,9 @@
 @extends('layouts.frontend.app', ['footerPage' => ''])
 
+@section('title')
+    Infograpik
+@endsection
+
 @section('content')
 <div class="data-pencarian">
     <div class="container">
@@ -126,7 +130,7 @@
     <div class="row produk-details">
       <div class="row berita-details">
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div
               class="card card-produk"
               data-aos="fade-up"
@@ -154,7 +158,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}"">
+          <a href="{{route('pages-details-infograpik')}}"">
             <div
               class="card card-produk"
               data-aos="fade-up"
@@ -186,7 +190,7 @@
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div class="card card-produk">
               <img
                 class="card-img-top"
@@ -240,7 +244,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div
               class="card card-produk"
               data-aos="fade-up"
@@ -268,7 +272,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div
               class="card card-produk"
               data-aos="fade-up"
@@ -298,7 +302,7 @@
     <div class="row produk-details">
       <div class="row berita-details">
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div
               class="card card-produk"
               data-aos="fade-up"
@@ -326,7 +330,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div
               class="card card-produk"
               data-aos="fade-up"
@@ -354,7 +358,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-          <a href="{{route('pages-infograpik')}}">
+          <a href="{{route('pages-details-infograpik')}}">
             <div
               class="card card-produk"
               data-aos="fade-up"

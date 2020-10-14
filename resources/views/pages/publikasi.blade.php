@@ -1,5 +1,9 @@
 @extends('layouts.frontend.app', ['footerPage' => 'footer'])
 
+@section('title')
+    Publikasi
+@endsection
+
 @section('content')
 <div role="main">
     <div class="container-fluid background-publikasi">

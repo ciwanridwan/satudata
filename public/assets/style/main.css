@@ -10926,8 +10926,8 @@ footer .hak-cipta p {
 }
 
 .navbar img {
-  width: 150px;
-  height: 40px;
+  width: 110px;
+  height: 50px;
 }
 
 .navbar a {
@@ -10980,11 +10980,11 @@ footer .hak-cipta p {
 }
 
 .jumbotron {
-  background-image: url("/assets//images/home/jumbotron-bg.jpg");
+  background-image: url("/assets/images/home/jumbotron-b.jpg");
   background-size: cover;
   opacity: 1;
   width: 100%;
-  height: 600px;
+  height: 650px;
   color: #ffffff;
 }
 
@@ -11057,7 +11057,7 @@ footer .hak-cipta p {
   .benefit .benefit-bg-3 {
     width: 100%;
     height: 650px;
-    background-image: url("/assets//images/home/benefit-bg3.png");
+    background-image: url("/assets/images/home/benefit-bg3.png");
     background-size: cover;
     margin-left: 769px;
   }
@@ -11065,7 +11065,7 @@ footer .hak-cipta p {
 
 .flow-tenant {
   text-align: center;
-  background-image: url("/assets//images/home/benefit-bg1.jpg");
+  background-image: url("/images/home/benefit-bg1.jpg");
   color: #ffffff;
 }
 
@@ -11182,7 +11182,7 @@ footer .hak-cipta p {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #cc2c0c;
+  background-color: #12446e;
 }
 
 .berita .card:hover {
@@ -11260,7 +11260,7 @@ footer {
 }
 
 .data-pencarian {
-  background-color: #cc2c0c;
+  background-color: #12446e;
   color: #ffffff;
   height: 630px;
 }
@@ -11414,7 +11414,7 @@ footer {
 }
 
 .background-datbase {
-  background-color: #cc2c0c !important;
+  background-color: #12446e !important;
   color: white;
   padding-top: 30px;
 }
@@ -11471,7 +11471,7 @@ footer {
 }
 
 .tentang-page .nav-pills {
-  background-color: #e62020;
+  background-color: #12446e;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -11487,6 +11487,6 @@ footer {
 }
 
 .tentang-page .nav-pills .active {
-  background-color: #9c1010;
+  background-color: #002d58;
 }
 /*# sourceMappingURL=main.css.map */

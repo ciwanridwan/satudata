@@ -1,5 +1,9 @@
 @extends('layouts.frontend.app', ['footerPage' => ''])
 
+@section('title')
+    Tentang Kami
+@endsection
+
 @section('content')
 <div class="container tentang-page">
     <h1><strong>Tentang</strong></h1>

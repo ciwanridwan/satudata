@@ -1,5 +1,9 @@
 @extends('layouts.frontend.app', ['footerPage' => 'footer'])
 
+@section('title')
+    Data
+@endsection
+
 @section('content')
 <div role="main">
     <div class="container-fluid background-datbase">

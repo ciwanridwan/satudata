@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class InfoGrapikController extends Controller
 {
+    public function details()
+    {
+        return view('pages.details.infograpik');
+    }
     /**
      * Display a listing of the resource.
      *

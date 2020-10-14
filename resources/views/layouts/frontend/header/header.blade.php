@@ -26,7 +26,7 @@
                     <b> <a class="nav-link" href="{{ route('pages-infograpik')}}">Infografik</a></b>
                 </li>
                 <li class="nav-item {{ Request::segment(1) == 'publikasi' ? 'active' : null }} nav-item-left">
-                    <b> <a class="nav-link" href="{{ route('pages-publikasi')}}">publikasi</a></b>
+                    <b> <a class="nav-link" href="{{ route('pages-publikasi')}}">Publikasi</a></b>
                 </li>
                 <li class="nav-item {{ Request::segment(1) == 'galery' ? 'active' : null }} nav-item-left">
                     <b> <a class="nav-link" href="{{ route('pages-galery')}}">Gallery</a></b>

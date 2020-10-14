@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
 Route::get('/', 'HomeController@index')->name('index');
 
 Route::group(['prefix' => 'data'], function (){
@@ -27,6 +25,8 @@ Route::get('publikasi', 'PublikasiController@index')->name('pages-publikasi');
 Route::get('galery', 'GaleryController@index')->name('pages-galery');
 Route::get('infograpik', 'InfoGrapikController@index')->name('pages-infograpik');
 Route::get('about', 'AboutController@index')->name('pages-about');
+Route::get('galery/details', 'GaleryController@details')->name('pages-details-galery');
+Route::get('infograpik/details', 'InfoGrapikController@details')->name('pages-details-infograpik');
 
 Route::group(['prefix' => 'user'], function (){
     Route::get('login', 'PublicUsersController@formLogin')->name('users-login');
