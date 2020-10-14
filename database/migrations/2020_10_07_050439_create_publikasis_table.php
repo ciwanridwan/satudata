@@ -16,7 +16,8 @@ class CreatePublikasisTable extends Migration
         Schema::create('publikasis', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->string('isi');
+            $table->longText('isi');
+            $table->string('file');
             $table->string('size_file');
             $table->timestamps();
         });
