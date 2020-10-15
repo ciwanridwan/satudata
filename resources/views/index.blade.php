@@ -6,7 +6,7 @@
 @section('content')
 <div class="jumbotron jumbotron-fluid page-content">
     <div class="container text-center" data-aos="zoom-in" data-aos-delay="800">
-        <img src="{{asset('/assets/logo-utama.png')}}" alt="" style="width: 300px;">
+        <img src="{{asset('/assets/logo-utama.png')}}" alt="" style="width: 400px; margin-top: 40px;">
         <h3 class="text-center mt-4"> <strong>SATU DATA KETENAGAKERJAAN</strong> </h3>
         <form method="GET" action="dataset.html">
             <div class="form-group mb-3">
