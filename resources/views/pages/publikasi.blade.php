@@ -53,7 +53,7 @@
                             <div class="list-group">
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
+                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
                                         <a href="" class="btn btn-success"
                                             style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
+                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
                                         <a href="" class="btn btn-success"
                                             style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
+                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
                                         <a href="" class="btn btn-success"
                                             style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
+                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
                                         <a href="" class="btn btn-success"
                                             style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
+                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
                                         <a href="" class="btn btn-success"
                                             style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>
@@ -163,7 +163,7 @@
                                 </div>
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="/images/publikasi/cover.jpg" alt="" style="width: 129px;">
+                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
                                         <a href="" class="btn btn-success"
                                             style="margin-top: 5px; width: 129px;">unduh</a>
                                     </div>

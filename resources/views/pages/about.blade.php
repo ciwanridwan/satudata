@@ -110,7 +110,7 @@
             <li>Bidang Diseminasi Informasi</li>
             <li>Subbagian Tata Usaha</li>
           </ol>
-          <img src="/images/tentang/struktur.png" alt="" />
+          <img src="{{ asset('/assets/images/tentang/struktur.png')}}" alt="" />
         </div>
         <div
           class="tab-pane fade"
