@@ -17,6 +17,8 @@ class Data extends Model
 		if (!empty($category)) {
 			$category = str_replace('-', ' ', $category);
 			$id = Ketenagakerjaan::where('nama', 'like', '%' . $category . '%')->value('id');
+		}
+		if (!empty($category) && empty($query)) {
 			$model = $model->where('ketenagakerjaan_id', $id);
 		}
 		if ($query) {

@@ -12,7 +12,7 @@ class Publikasi extends Model
 	public static function search($query, $year = null, $request)
 	{
 		$model = new self;
-		if (!empty($request->year)) {
+		if (!empty($request->year) && empty($query)) {
 			$model = $model->whereYear('created_at', $request->year);
 		}
 		if ($query) {
@@ -34,6 +34,7 @@ class Publikasi extends Model
 			}
 		}
 		$return['total'] = $model->count();
+		// dd($model->get()->toArray());
 		$return['data'] = $model->orderBy('created_at', 'desc')->orderBy('judul', 'asc')
 		->paginate(10);
 		return [$return['data'], $return['total']];
