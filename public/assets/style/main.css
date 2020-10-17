@@ -10980,7 +10980,7 @@ footer .hak-cipta p {
 }
 
 .jumbotron {
-  background-image: url("/assets/images/home/jumbotron-b.jpg");
+  background-image: url("/images/home/jumbotron-b.jpg");
   background-size: cover;
   opacity: 1;
   width: 100%;
@@ -11023,7 +11023,7 @@ footer .hak-cipta p {
   .benefit .benefit-bg-1 {
     width: 100%;
     height: 550px;
-    background-image: url("/assets/images/home/benefit-bg1.png");
+    background-image: url("/images/home/benefit-bg1.png");
     background-size: cover;
     margin-left: -115px;
     margin-top: -80px;
@@ -11057,7 +11057,7 @@ footer .hak-cipta p {
   .benefit .benefit-bg-3 {
     width: 100%;
     height: 650px;
-    background-image: url("/assets/images/home/benefit-bg3.png");
+    background-image: url("/images/home/benefit-bg3.png");
     background-size: cover;
     margin-left: 769px;
   }
@@ -11346,6 +11346,50 @@ footer {
 .berita-background:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.page-details h5 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #0c0d36;
+}
+
+.page-details .store-gallery {
+  margin-top: 20px;
+}
+
+.page-details .store-gallery img {
+  border-radius: 10px;
+}
+
+.page-details .store-gallery .thumbnail-image {
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+}
+
+.page-details .store-gallery .thumbnail-image:hover, .page-details .store-gallery .thumbnail-image.active {
+  border: 2px solid #ff7158;
+}
+
+.page-details .margin-details {
+  margin-top: 70px;
+}
+
+.store-description {
+  margin-top: 50px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.button-galeri .btn-primary {
+  text-align: center !important;
+  margin-top: 10px;
+  background: var(--unnamed-color-15406a) 0% 0% no-repeat padding-box;
+  background: #15406a 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 3px 6px #0000003b;
+          box-shadow: 0px 3px 6px #0000003b;
+  border-radius: 6px;
+  opacity: 1;
+  font-size: 12px;
 }
 
 .backround-biru {

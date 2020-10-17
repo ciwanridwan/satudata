@@ -29,10 +29,13 @@
                     <b> <a class="nav-link" href="{{ route('pages-publikasi')}}">Publikasi</a></b>
                 </li>
                 <li class="nav-item {{ Request::segment(1) == 'galery' ? 'active' : null }} nav-item-left">
-                    <b> <a class="nav-link" href="{{ route('pages-galery')}}">Gallery</a></b>
+                    <b> <a class="nav-link" href="{{ route('pages-galery')}}">Galeri</a></b>
                 </li>
                 <li class="nav-item nav-item-left">
                     <b> <a class="nav-link" href="https://linda.kemnaker.go.id">Permintaan Data</a></b>
+                </li>
+                <li class="nav-item nav-item-left">
+                    <b> <a class="nav-link" href="https://satudata.kemnaker.go.id">Pengisian Data</a></b>
                 </li>
                 <li class="nav-item {{ Request::segment(1) == 'about' ? 'active' : null }} nav-item-left">
                     <b> <a class="nav-link" href="{{ route('pages-about')}}">Tentang Kami</a></b>
