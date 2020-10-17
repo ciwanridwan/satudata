@@ -31,6 +31,7 @@
 
 
     <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('/assets/vendor/jquery/jquery.slim.min.js')}}"></script>
     <script src="{{asset('/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -39,10 +40,10 @@
     </script>
     <script>
         ///////////////// fixed menu on scroll for desktop
-                if ($(window).width() > 992) {
-                    $(window).scroll(function() {
-                        if ($(this).scrollTop() > 35) {
-                            $("#navbar_top").addClass("fixed-top");
+        if ($(window).width() > 992) {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 35) {
+                    $("#navbar_top").addClass("fixed-top");
                             // add padding top to show content behind navbar
                             $("body").css("padding-top", $(".navbar").outerHeight() + "px");
                         } else {
@@ -52,10 +53,10 @@
                         }
                     });
                 } // end if
-    </script>
-    <!-- data neet -->
-    <script>
-        Highcharts.setOptions({
+            </script>
+            <!-- data neet -->
+            <script>
+                Highcharts.setOptions({
                     colors: ['#32a852', '#a83232']
                 });
                 Highcharts.chart('neet', {
@@ -95,10 +96,10 @@
                         }]
                     }]
                 });
-    </script>
-    <!-- data covid -->
-    <script>
-        Highcharts.setOptions({
+            </script>
+            <!-- data covid -->
+            <script>
+                Highcharts.setOptions({
                     colors: ['#01BAF2', '#71BF45', '#FAA74B']
                 });
                 Highcharts.chart('covid2', {
@@ -141,11 +142,12 @@
                         }]
                     }]
                 });
-    </script>
-    <!-- chart neet -->
-    <script src="{{asset('/assets/vendor/chart/canvasjs.min.js')}}"></script>
-    <script src="{{asset('/assets/vendor/chart/jquery.canvasjs.min.js')}}"></script>
-    @yield('js-data')
-</body>
+            </script>
+            <!-- chart neet -->
+            <script src="{{asset('/assets/vendor/chart/canvasjs.min.js')}}"></script>
+            <script src="{{asset('/assets/vendor/chart/jquery.canvasjs.min.js')}}"></script>
+            @yield('foot-content')
+            @yield('js-data')
+        </body>
 
-</html
+        </html
