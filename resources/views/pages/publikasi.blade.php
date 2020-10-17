@@ -1,8 +1,6 @@
 @extends('layouts.frontend.app', ['footerPage' => 'footer'])
 
-@section('title')
-    Publikasi
-@endsection
+@section('title', 'Publikasi')
 
 @section('content')
 <div role="main">
@@ -27,186 +25,56 @@
                                 <h5 style="margin-left: 14px;"><strong>Publikasi</strong> </h5>
                             </div>
                             <br>
-                            <form class="list-group">
-                                <div class="col-12 row">
+                            <form class="list-group" action="{{ url('publikasi') }}">
+                                <div class="col-12 row form-group">
                                     <label for="inputPassword" class="col-md-2 col-form-label">Tahun :</label>
                                     <div class="col-md-5">
-                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                            <option value="">Pilih Tahun</option>
-                                            <option value="">2020</option>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="year">
+                                            <option selected disabled>Pilih Tahun</option>
+                                            @foreach($years as $key => $year)
+                                            <option value="{{ $year }}" <?= !empty($_GET['year']) && $_GET['year'] == $year ? 'selected' : null ?>>{{ $year }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
-                            </form>
-                            <br>
-                            <form class="list-group">
-                                <div class="col-12 row">
+                                <div class="col-12 row form-group">
                                     <label for="inputPassword" class="col-md-2 col-form-label">Kata Kunci :</label>
                                     <div class="col-md-5">
-                                        <input type="password" class="form-control" id="InputKataKunci"
-                                            placeholder="kata kunci">
+                                        <input type="text" class="form-control" id="InputKataKunci" placeholder="Masukkan Kata Kunci" name="q" value="{{ !empty($query) ? $query : null }}">
                                     </div>
-                                    <a href="" class="btn btn-success">cari publikasi</a>
+                                    <button type="submit" class="btn btn-success">Cari Publikasi</button>
                                 </div>
                             </form>
                             <br><br>
+                            <div class="container">
+                                <div class="alert alert-dark alert-important" role="alert">
+                                    Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> dataset
+                                </div>
+                            </div>
                             <div class="list-group">
+                                @foreach($publications as $key => $publication)
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success"
-                                            style="margin-top: 5px; width: 129px;">unduh</a>
+                                        <img src="{{ url($publication->thumbnail) }}" alt="" style="width: 129px;">
+                                        <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success" style="margin-top: 5px; width: 129px;">Unduh</a>
                                     </div>
                                     <div class="col-10">
-                                        <p><strong>Kenaikan Angka Kerja 2019</strong></p>
-                                        <small>Tanggal Rilis : <span>2020-09-12</span></small>
+                                        <p><strong>{{ $publication->judul }}</strong></p>
+                                        <small>Tanggal Rilis : <span>{{ $publication->date }}</span></small>
                                         <br>
-                                        <small>Ukuran FIle : <span>11 mb</span></small>
+                                        <small>Ukuran FIle : <span>{{ $publication->size_file }}</span></small>
                                         <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
-                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
-                                            juta orang, naik 2,24 juta orang dibandingkan Februari
-                                            2018.
-                                        </p>
+                                        <p>{{ $publication->isi }}</p>
                                     </div>
                                 </div>
-                                <div id="eris"
-                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-                                </div>
-                                <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-2">
-                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success"
-                                            style="margin-top: 5px; width: 129px;">unduh</a>
-                                    </div>
-                                    <div class="col-9">
-                                        <p><strong>Kenaikan Angka Kerja 2019</strong></p>
-                                        <small>Tanggal Rilis : <span>2020-09-12</span></small>
-                                        <br>
-                                        <small>Ukuran FIle : <span>11 mb</span></small>
-                                        <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
-                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
-                                            juta orang, naik 2,24 juta orang dibandingkan Februari
-                                            2018.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="eris"
-                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-                                </div>
-                                <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-2">
-                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success"
-                                            style="margin-top: 5px; width: 129px;">unduh</a>
-                                    </div>
-                                    <div class="col-9">
-                                        <p><strong>Kenaikan Angka Kerja 2019</strong></p>
-                                        <small>Tanggal Rilis : <span>2020-09-12</span></small>
-                                        <br>
-                                        <small>Ukuran FIle : <span>11 mb</span></small>
-                                        <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
-                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
-                                            juta orang, naik 2,24 juta orang dibandingkan Februari
-                                            2018.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="eris"
-                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-                                </div>
-                                <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-2">
-                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success"
-                                            style="margin-top: 5px; width: 129px;">unduh</a>
-                                    </div>
-                                    <div class="col-9">
-                                        <p><strong>Kenaikan Angka Kerja 2019</strong></p>
-                                        <small>Tanggal Rilis : <span>2020-09-12</span></small>
-                                        <br>
-                                        <small>Ukuran FIle : <span>11 mb</span></small>
-                                        <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
-                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
-                                            juta orang, naik 2,24 juta orang dibandingkan Februari
-                                            2018.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="eris"
-                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-                                </div>
-                                <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-2">
-                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success"
-                                            style="margin-top: 5px; width: 129px;">unduh</a>
-                                    </div>
-                                    <div class="col-9">
-                                        <p><strong>Kenaikan Angka Kerja 2019</strong></p>
-                                        <small>Tanggal Rilis : <span>2020-09-12</span></small>
-                                        <br>
-                                        <small>Ukuran FIle : <span>11 mb</span></small>
-                                        <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
-                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
-                                            juta orang, naik 2,24 juta orang dibandingkan Februari
-                                            2018.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="eris"
-                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-                                </div>
-                                <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-2">
-                                        <img src="{{asset('/assets/images/publikasi/cover.jpg')}}" alt="" style="width: 129px;">
-                                        <a href="" class="btn btn-success"
-                                            style="margin-top: 5px; width: 129px;">unduh</a>
-                                    </div>
-                                    <div class="col-9">
-                                        <p><strong>Kenaikan Angka Kerja 2019</strong></p>
-                                        <small>Tanggal Rilis : <span>2020-09-12</span></small>
-                                        <br>
-                                        <small>Ukuran FIle : <span>11 mb</span></small>
-                                        <br><br>
-                                        <p>Jumlah angkatan kerja meningkat. Berdasarkan data Badan Pusat Statistik
-                                            (BPS), Senin (6/5/2019), angkatan kerja pada Februari 2019 sebanyak 136,18
-                                            juta orang, naik 2,24 juta orang dibandingkan Februari
-                                            2018.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="eris"
-                                    style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-                                </div>
+                                <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>
+                                @endforeach
                             </div>
-                            <br />
-                            <div aria-label="Page navigation example ">
-                                <nav aria-label="...">
-                                    <ul class="pagination d-flex justify-content-center">
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1"
-                                                aria-disabled="true">Previous</a>
-                                        </li>
-                                        <li class="page-item active" aria-current="page">
-                                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-
+                        </div>
                     </section>
                     <section class="module">
-                        <div class="module-content">
+                        <div class="module-content form-group">
+                            {{ $publications->links() }}
                         </div>
                     </section>
                 </div>

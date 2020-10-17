@@ -65,8 +65,8 @@
                                     <label class="input-group-text" for="inputGroupSelect01">Sortir Berdasarkan</label>
                                 </div>
                                 <select class="custom-select" id="inputGroupSelect01" name="sort">
-                                    <option value="desc">Data Terbaru</option>
-                                    <option value="asc">Data Terlama</option>
+                                    <option value="desc" <?= !empty($_GET['sort']) && $_GET['sort'] == 'desc' ? 'active' : null ?>>Data Terbaru</option>
+                                    <option value="asc" <?= !empty($_GET['sort']) && $_GET['sort'] == 'asc' ? 'active' : null ?>>Data Terlama</option>
                                 </select>
                             </div>
                             <div class="mb-3">

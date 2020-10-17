@@ -49,7 +49,7 @@ class Data extends Model
 
 	public static function getColumns()
 	{
-		return Schema::getColumnListing('data');		
+		return Schema::getColumnListing('data');
 	}
 
 	public function getCreatedAtAttribute($value)
