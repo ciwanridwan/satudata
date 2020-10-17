@@ -17,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('index');
 
 Route::group(['prefix' => 'data'], function (){
-    Route::get('/', 'DataController@index')->name('pages-data');
-    Route::get('{query}', 'DataController@index')->name('page-data-query');
+	Route::get('/', 'DataController@index')->name('pages-data');
+	Route::get('{query}', 'DataController@index')->name('page-data-query');
+});
+
+Route::group(['prefix' => 'data-{category}'], function (){
+	Route::get('/', 'DataController@category')->name('pages-category-data');
+	Route::get('{query}', 'DataController@category')->name('page-category-data-query');
 });
 
 Route::get('publikasi', 'PublikasiController@index')->name('pages-publikasi');
@@ -29,8 +34,8 @@ Route::get('galery/details', 'GaleryController@details')->name('pages-details-ga
 Route::get('infograpik/details', 'InfoGrapikController@details')->name('pages-details-infograpik');
 
 Route::group(['prefix' => 'user'], function (){
-    Route::get('login', 'PublicUsersController@formLogin')->name('users-login');
-    Route::get('register', 'PublicUsersController@formRegister')->name('users-register');
+	Route::get('login', 'PublicUsersController@formLogin')->name('users-login');
+	Route::get('register', 'PublicUsersController@formRegister')->name('users-register');
 });
 
 
