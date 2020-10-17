@@ -23,7 +23,7 @@ class DataController extends Controller
         if (!empty($query)) {
             $data['query'] = $query;
         }
-        $employments = Ketenagakerjaan::groupBy('kategori')->orderBy('kategori', 'asc')->pluck('kategori');
+        $employments = Ketenagakerjaan::groupBy('kategori')->orderBy('kategori', 'desc')->pluck('kategori');
         foreach ($employments as $key => $employment) {
             $data['employment'][$employment] = Ketenagakerjaan::where('kategori', $employment)->orderBy('nama', 'asc')->get()->toArray();
         }
@@ -41,7 +41,7 @@ class DataController extends Controller
         if (!empty($query)) {
             $data['query'] = $query;
         }
-        $employments = Ketenagakerjaan::groupBy('kategori')->orderBy('kategori', 'asc')->pluck('kategori');
+        $employments = Ketenagakerjaan::groupBy('kategori')->orderBy('kategori', 'desc')->pluck('kategori');
         foreach ($employments as $key => $employment) {
             $data['employment'][$employment] = Ketenagakerjaan::where('kategori', $employment)->orderBy('nama', 'asc')->get()->toArray();
         }
