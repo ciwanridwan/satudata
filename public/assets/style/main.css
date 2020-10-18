@@ -10980,7 +10980,7 @@ footer .hak-cipta p {
 }
 
 .jumbotron {
-  background-image: url("/images/home/jumbotron-b.jpg");
+  background-image: url("/assets/images/home/jumbotron-b.jpg");
   background-size: cover;
   opacity: 1;
   width: 100%;
@@ -11023,7 +11023,7 @@ footer .hak-cipta p {
   .benefit .benefit-bg-1 {
     width: 100%;
     height: 550px;
-    background-image: url("/images/home/benefit-bg1.png");
+    background-image: url("/assets/images/home/benefit-bg1.png");
     background-size: cover;
     margin-left: -115px;
     margin-top: -80px;
@@ -11057,7 +11057,7 @@ footer .hak-cipta p {
   .benefit .benefit-bg-3 {
     width: 100%;
     height: 650px;
-    background-image: url("/images/home/benefit-bg3.png");
+    background-image: url("/assets/images/home/benefit-bg3.png");
     background-size: cover;
     margin-left: 769px;
   }
@@ -11065,7 +11065,7 @@ footer .hak-cipta p {
 
 .flow-tenant {
   text-align: center;
-  background-image: url("/images/home/benefit-bg1.jpg");
+  background-image: url("/assets/images/home/benefit-bg1.jpg");
   color: #ffffff;
 }
 

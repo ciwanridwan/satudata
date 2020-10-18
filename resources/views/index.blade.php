@@ -41,7 +41,7 @@
         </div>
 </section>
 
-<div class="benefit mb-4" style="margin-top: 180px;">
+<div class="benefit mb-4" style="margin-top: 180px;" style="background-image: url('{{ asset('assets/images/home/benefit-bg1.jpg')  }}')">
     <h1><strong>Layanan Kami</strong></h1>
     <div class="container">
         <div class="row">
