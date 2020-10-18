@@ -74,7 +74,7 @@
                     </section>
                     <section class="module">
                         <div class="module-content form-group">
-                            {{ $publications->links() }}
+                            {{ $publications->appends(request()->input())->links() }}
                         </div>
                     </section>
                 </div>

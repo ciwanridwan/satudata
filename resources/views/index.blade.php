@@ -4,7 +4,7 @@
     Beranda
 @endsection
 @section('content')
-<div class="jumbotron jumbotron-fluid page-content">
+<div class="jumbotron jumbotron-fluid page-content" style="background-image: url('{{ asset('assets/images/home/jumbotron-b.jpg')  }}')">
     <div class="container text-center" data-aos="zoom-in" data-aos-delay="800">
         <img src="{{asset('/assets/logo-utama.png')}}" alt="" style="width: 400px; margin-top: 40px;">
         <h3 class="text-center mt-4"> <strong>SATU DATA KETENAGAKERJAAN</strong> </h3>

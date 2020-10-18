@@ -97,7 +97,7 @@
                     @endforeach
                 </div>
                 <br />
-                {{ $datas->links() }}
+                {{ $datas->appends(request()->input())->links() }}
             </div>
         </section>
         <section class="module">
