@@ -14,35 +14,46 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', 'HomeController@index')->name('index');
 
-Route::group(['prefix' => 'data'], function (){
+Route::group(['prefix' => 'data'], function () {
 	Route::get('/', 'DataController@index')->name('pages-data');
 	Route::get('{query}', 'DataController@index')->name('page-data-query');
+	
 });
 
-Route::group(['prefix' => 'data-{category}'], function (){
+Route::get('details/data', 'DataController@details')->name('page-data-details');
+
+Route::group(['prefix' => 'data-{category}'], function () {
 	Route::get('/', 'DataController@category')->name('pages-category-data');
 	Route::get('{query}', 'DataController@category')->name('page-category-data-query');
 });
 
-Route::group(['prefix' => 'publikasi'], function (){
+Route::group(['prefix' => 'publikasi'], function () {
 	Route::get('/', 'PublikasiController@index')->name('pages-publikasi');
 	Route::get('{query}', 'PublikasiController@index')->name('page-publikasi-query');
 });
 
-Route::group(['prefix' => 'publikasi-{year}'], function (){
+Route::group(['prefix' => 'publikasi-{year}'], function () {
 	Route::get('/', 'PublikasiController@year')->name('pages-year-publikasi');
 	Route::get('{query}', 'PublikasiController@year')->name('page-year-publikasi-query');
 });
 
-Route::get('galery', 'GaleryController@index')->name('pages-galery');
-Route::get('infograpik', 'InfoGrapikController@index')->name('pages-infograpik');
-Route::get('about', 'AboutController@index')->name('pages-about');
-Route::get('galery/details', 'GaleryController@details')->name('pages-details-galery');
-Route::get('infograpik/details', 'InfoGrapikController@details')->name('pages-details-infograpik');
+Route::group(['prefix' => 'galeri'], function () {
+	Route::get('/', 'GaleryController@index')->name('pages-galery');
+	Route::get('/details', 'GaleryController@details')->name('pages-details-galery');
+});
 
-Route::group(['prefix' => 'user'], function (){
+
+Route::group(['prefix' => 'infograpik'], function () {
+	Route::get('', 'InfoGrapikController@index')->name('pages-infograpik');
+	Route::get('/details', 'InfoGrapikController@details')->name('pages-details-infograpik');
+});
+
+Route::get('about', 'AboutController@index')->name('pages-about');
+
+Route::group(['prefix' => 'user'], function () {
 	Route::get('login', 'PublicUsersController@formLogin')->name('users-login');
 	Route::get('register', 'PublicUsersController@formRegister')->name('users-register');
 });

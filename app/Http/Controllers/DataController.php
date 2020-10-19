@@ -9,6 +9,10 @@ use DB;
 
 class DataController extends Controller
 {
+    public function details()
+    {
+        return view('pages.details.data');
+    }
     /**
      * Display a listing of the resource.
      *
