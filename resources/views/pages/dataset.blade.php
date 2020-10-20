@@ -85,7 +85,7 @@
                         <div class="col-md-12" style="border-bottom: 1px #fff!important;">
                             <a href="{{route('page-data-details', $data->judul)}}" style="color: #f5a947"
                             style="font-size:18px !important;">{{ $data->judul }}</a><br />
-                            <small>{{ date('Y-m-d', strtotime($data->created_at)) }} - {{ \Illuminate\Support\Str::limit($data->isi, 42, '...') }}
+                            <small>{{ date('Y-m-d', strtotime($data->created_at)) }} - {{ \Illuminate\Support\Str::limit($data->isi, 200, '...') }}
                             </small><br />
                             <small o="/dataset/fraksi-fraksi-dprd-kabupaten-bantul"
                             data-format="{{ $data->format_berkas }}"><span
