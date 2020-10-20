@@ -23,7 +23,7 @@ Route::group(['prefix' => 'data'], function () {
 	
 });
 
-Route::get('details/data', 'DataController@details')->name('page-data-details');
+Route::get('details/data/{judul}', 'DataController@details')->name('page-data-details');
 
 Route::group(['prefix' => 'data-{category}'], function () {
 	Route::get('/', 'DataController@category')->name('pages-category-data');

@@ -9,9 +9,11 @@ use DB;
 
 class DataController extends Controller
 {
-    public function details()
+    public function details($judul)
     {
-        return view('pages.details.data');
+        $data = Data::where('judul', $judul)->first();
+        // dd($data->abstraksi);
+        return view('pages.details.data')->with('data', $data);
     }
     /**
      * Display a listing of the resource.
