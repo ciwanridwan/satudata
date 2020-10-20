@@ -9,10 +9,9 @@ Beranda
     <div class="container text-center" data-aos="zoom-in" data-aos-delay="800">
         <img src="{{asset('/assets/logo-utama.png')}}" alt="" style="width: 400px; margin-top: 40px;">
         <h3 class="text-center mt-4"> <strong>SATU DATA KETENAGAKERJAAN</strong> </h3>
-        <form method="GET" action="dataset.html">
+        <form method="GET" action="{{ url()->current() }}">
             <div class="form-group mb-3">
-                <input type="text" class="form-control" id="e_keyword" placeholder="Masukan kata kunci pencarian ..."
-                    name="q">
+                <input type="text" class="form-control" id="e_keyword" placeholder="Masukan kata kunci pencarian ..." name="q">
             </div>
             <button type="submit" class="btn btn-success">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none"
