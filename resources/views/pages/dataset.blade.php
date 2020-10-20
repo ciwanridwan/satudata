@@ -83,7 +83,7 @@
                     <div class="list-group" id="block-data">
                         @foreach($datas as $key => $data)
                         <div class="col-md-12" style="border-bottom: 1px #fff!important;">
-                            <a href="/dataset/fraksi-fraksi-dprd-kabupaten-bantul"
+                            <a href="/dataset/fraksi-fraksi-dprd-kabupaten-bantul" style="color: #f5a947"
                             style="font-size:18px !important;">{{ $data->judul }}</a><br />
                             <small>{{ date('Y-m-d', strtotime($data->created_at)) }} - {{ $data->isi }}
                             </small><br />
