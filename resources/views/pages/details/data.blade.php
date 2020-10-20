@@ -1,7 +1,7 @@
 @extends('layouts.frontend.app', ['footerPage' => 'footer'])
 
 @section('title')
-Details Data    
+Details Data
 @endsection
 
 @section('content')
@@ -44,17 +44,14 @@ Details Data
                                 <small>Jadwal Rilis: <span>{{$data->created_at}}</span></small>
                                 <br />
                                 <small>
-                  Ukuran File: <span><strong>{{$data->size_files}}</strong></span>
-                </small>
+                                    Ukuran File: <span><strong>{{$data->size_files}}</strong></span>
+                                </small>
                                 <br /><br />
-                                <a href="" class="btn btn-success">unduh brs ini</a>
+                                <a href="{{asset('storage/files/'. $data->file)}}" id="" class="btn btn-success" download="">unduh brs ini</a>
                                 <br /><br />
                                 <p><strong>Abstraksi</strong></p>
                                 <ul>
-                                    <li>
-                                        {!! $data->abstraksi !!}
-                                    </li>
-                                    
+                                    {!! $data->abstraksi !!}
                                 </ul>
                                 <br />
                             </div>
@@ -110,5 +107,25 @@ Details Data
             </div>
         </div>
     </div>
-</footer> 
+</footer>
+@endsection
+
+@section('js-download')
+<script>
+function downloadAll(urls) {
+  var link = document.createElement('a');
+
+  link.setAttribute('download', null);
+  link.style.display = 'none';
+
+  document.body.appendChild(link);
+
+  for (var i = 0; i < urls.length; i++) {
+    link.setAttribute('href', urls[i]);
+    link.click();
+  }
+
+  document.body.removeChild(link);
+}
+</script>
 @endsection

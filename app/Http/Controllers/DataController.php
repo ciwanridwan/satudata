@@ -6,9 +6,19 @@ use Illuminate\Http\Request;
 use App\Ketenagakerjaan;
 use App\Data;
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class DataController extends Controller
 {
+    public function unduhFile($file)
+    {
+        $file = Data::where('file', $file)->first();
+        return response()->download(asset('storage/app/public/files/'. $file->file));
+        // $path = Storage::disk('public')->get($file);
+        // return response()->download($path);
+        // $file_path = public_path('files/' . $file);
+        // return response()->download($file_path);
+    }
     public function details($judul)
     {
         $data = Data::where('judul', $judul)->first();

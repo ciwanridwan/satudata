@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Galery;
+use App\KategoriGalery;
 use Illuminate\Http\Request;
 
 class GaleryController extends Controller
 {
-    public function details()
+    public function details($judul)
     {
-        return view('pages.details.galery');
+        $galery = Galery::where('judul', $judul)->first();
+        // dd($galery);
+        return view('pages.details.galery')->with('galery', $galery);
     }
     /**
      * Display a listing of the resource.
@@ -17,7 +21,9 @@ class GaleryController extends Controller
      */
     public function index()
     {
-        return view('pages.galery');
+        $galery = Galery::orderBy('created_at', 'desc')->get();
+        $kategori = KategoriGalery::all();
+        return view('pages.galery')->with('galery', $galery)->with('kategori', $kategori);
     }
 
     /**

@@ -24,6 +24,7 @@ Route::group(['prefix' => 'data'], function () {
 });
 
 Route::get('details/data/{judul}', 'DataController@details')->name('page-data-details');
+Route::get('/download/{file}', 'DataController@unduhFile')->name('download-file-data');
 
 Route::group(['prefix' => 'data-{category}'], function () {
 	Route::get('/', 'DataController@category')->name('pages-category-data');
@@ -42,7 +43,7 @@ Route::group(['prefix' => 'publikasi-{year}'], function () {
 
 Route::group(['prefix' => 'galeri'], function () {
 	Route::get('/', 'GaleryController@index')->name('pages-galery');
-	Route::get('/details', 'GaleryController@details')->name('pages-details-galery');
+	Route::get('/details/{judul}', 'GaleryController@details')->name('pages-details-galery');
 });
 
 
