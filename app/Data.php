@@ -9,7 +9,7 @@ use App\Ketenagakerjaan;
 class Data extends Model
 {
 	protected $hidden = ['id','updated_at'];
-	protected $appends = ['tahun','format_berkas'];
+	protected $appends = ['tahun','format_berkas','size_files'];
 
 	public static function search($query, $category = null, $request)
 	{
@@ -67,5 +67,17 @@ class Data extends Model
 	public function getFormatBerkasAttribute()
 	{
 		return pathinfo($this->file, PATHINFO_EXTENSION);
+	}
+
+	public function getSizeFilesAttribute($value)
+	{
+		if (!empty($value)) {
+			return $value;
+		}
+
+		$file = public_path('files/' . $this->file);
+		if (file_exists($file)) {
+			return filesize($file);
+		}
 	}
 }
