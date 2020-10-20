@@ -99,7 +99,7 @@ Beranda
     <!-- detail berita -->
     <div class="row berita-details">
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
-            <a href="{{route('pages-details-galery')}}">
+            <a href="#">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('/assets/images/news/news2.png')}}" alt="Card image cap">
                     <div class="card-body">
@@ -117,7 +117,7 @@ Beranda
             </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="300">
-            <a href="{{route('pages-details-galery')}}">
+            <a href="#">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('/assets/images/news/news3.png')}}" alt="Card image cap">
                     <div class="card-body">
@@ -135,7 +135,7 @@ Beranda
             </a>
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="400">
-            <a href="{{route('pages-details-galery')}}">
+            <a href="#">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('/assets/images/news/news1.png')}}" alt="Card image cap">
                     <div class="card-body">
