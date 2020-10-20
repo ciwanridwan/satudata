@@ -115,3 +115,36 @@
     </div>
 </div>
 @endsection
+
+
+@section('js-galeri')
+<script>
+    var gallery = new Vue({
+        el: "#gallery",
+        mounted() {
+            AOS.init();
+        },
+        data: {
+            activePhoto: 1,
+            photos: [{
+                id: 1,
+                url: "/assets/images/berita/news1.jpg",
+            }, {
+                id: 2,
+                url: "/assets/images/berita/news4.jpeg",
+            }, {
+                id: 3,
+                url: "/assets/images/berita/news3.jpeg",
+            }, {
+                id: 4,
+                url: "/assets/images/berita/berita4.png",
+            }, ],
+        },
+        methods: {
+            changeActive(id) {
+                this.activePhoto = id;
+            },
+        },
+    });
+</script>
+@endsection
