@@ -47,7 +47,7 @@ Details Data
                                     Ukuran File: <span><strong>{{$data->size_files}}</strong></span>
                                 </small>
                                 <br /><br />
-                                <a href="{{asset('storage/files/'. $data->file)}}" id="" class="btn btn-success" download="">unduh brs ini</a>
+                                <a href="{{asset('files/'. $data->file)}}" id="" class="btn btn-success" download="">unduh brs ini</a>
                                 <br /><br />
                                 <p><strong>Abstraksi</strong></p>
                                 <ul>
