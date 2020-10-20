@@ -55,7 +55,7 @@
                                 @foreach($publications as $key => $publication)
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
                                     <div class="col-2">
-                                        <img src="{{ url($publication->thumbnail) }}" alt="" style="width: 129px;">
+                                        <img src="{{ url($publication->thumbnail) }}" alt="" style="width: 129px; max-height: 187px;">
                                         <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success" style="margin-top: 5px; width: 129px;">Unduh</a>
                                     </div>
                                     <div class="col-10">
