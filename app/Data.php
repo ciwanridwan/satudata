@@ -9,7 +9,7 @@ use App\Ketenagakerjaan;
 class Data extends Model
 {
 	protected $hidden = ['id','updated_at'];
-	protected $appends = ['tahun'];
+	protected $appends = ['tahun','format_berkas'];
 
 	public static function search($query, $category = null, $request)
 	{
@@ -62,5 +62,10 @@ class Data extends Model
 	public function getTahunAttribute()
 	{
 		return date('Y', strtotime($this->created_at));
+	}
+
+	public function getFormatBerkasAttribute()
+	{
+		return pathinfo($this->file, PATHINFO_EXTENSION);
 	}
 }
