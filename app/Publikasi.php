@@ -50,8 +50,12 @@ class Publikasi extends Model
 		return date('Y-m-d', strtotime($this->created_at));
 	}
 
-	public function getSizeFileAttribute()
+	public function getSizeFileAttribute($value)
 	{
+		if (!file_exists(public_path('files/'. $this->file))) {
+			return $value;
+		}
+		
 		$file_size = filesize(public_path('files/'. $this->file));
 
 		if ($file_size >= 1073741824) {
