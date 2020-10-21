@@ -90,7 +90,7 @@
       <div class="col-lg-4 col-md-6 mt-5 mb-5">
         <a href="{{route('pages-details-infograpik')}}">
           <div class="card card-produk" data-aos="fade-up" data-aos-delay="100" >
-            <img class="card-img-top" src="{{ asset('/assets/images/infografik/infografik1.jpg')}}" alt="Card image cap" />
+            <img class="card-img-top" src="{{ asset('/files/infografik/' . $infographic->gambar)}}" alt="Card image cap" />
             <div class="card-body">
               <div class="row judul-berita">
                 <div class="col-7">
