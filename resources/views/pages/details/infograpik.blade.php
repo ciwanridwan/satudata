@@ -43,23 +43,23 @@
 </div>
 <div class="container produk mb-8">
     <div class="row justify-content-center produk-details berita-details">
-        @foreach($infographics as $key => $infographic)
-        <?php $infographic = (object)$infographic; ?>
+        @foreach($infographics as $key => $value)
+        <?php $value = (object)$value; ?>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-            <a href="{{ route('pages.detail.infograpik', $infographic->id) }}">
+            <a href="{{ route('pages.detail.infograpik', $value->id) }}">
                 <div class="card card-produk" data-aos="fade-up" data-aos-delay="100">
-                    <img class="card-img-top" src="{{ asset('/files/infografik/' . $infographic->gambar) }}" alt="Card image cap" />
+                    <img class="card-img-top" src="{{ asset('/files/infografik/' . $value->gambar) }}" alt="Card image cap" />
                     <div class="card-body">
                         <div class="row judul-berita">
                             <div class="col-7">
-                                <p class="card-title">{{ $infographic->category }}</p>
+                                <p class="card-title">{{ $value->category }}</p>
                             </div>
                             <div class="col-5">
-                                <p class="card-title">{{ $infographic->date }}</p>
+                                <p class="card-title">{{ $value->date }}</p>
                             </div>
                         </div>
                         <h2 class="card-text">
-                            {{ $infographic->judul }}
+                            {{ $value->judul }}
                         </h2>
                     </div>
                 </div>
