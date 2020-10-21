@@ -52,7 +52,7 @@ class Publikasi extends Model
 
 	public function getSizeFileAttribute()
 	{
-		$file_size = filesize(public_path('files/'. $data->file));
+		$file_size = filesize(public_path('files/'. $this->file));
 
 		if ($file_size >= 1073741824) {
 			$file_size = number_format($file_size / 1073741824, 2).'GB';
