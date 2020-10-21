@@ -46,7 +46,7 @@
         @foreach($infographics as $key => $value)
         <?php $value = (object)$value; ?>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-            <a href="{{ url('infograpik') . '/' . \Illuminate\Support\Facades\Crypt::encryptString($value->plain_id) . '/details' }}">
+            <a href="{{ route('pages.detail.infograpik', $value->plain_id) }}">
                 <div class="card card-produk" data-aos="fade-up" data-aos-delay="100">
                     <img class="card-img-top" src="{{ asset('/files/infografik/' . $value->gambar) }}" alt="Card image cap" />
                     <div class="card-body">

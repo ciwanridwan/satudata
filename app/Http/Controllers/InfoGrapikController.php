@@ -51,7 +51,7 @@ class InfoGrapikController extends Controller
     {
         try {
             $id = Crypt::decryptString($id);
-        } catch (\Illuminate\Contracts\Encryption\DecryptException $e) {
+        } catch (Illuminate\Contracts\Encryption\DecryptException $e) {
             return redirect()->back()->withInput();
         }
         $infographic = InfoGrapik::find($id);

@@ -8,9 +8,9 @@ use Crypt;
 
 class InfoGrapik extends Model
 {
-	protected $appends = ['plain_id', 'category', 'date', 'id'];
+	protected $appends = ['id','category', 'date', 'plain_id'];
 
-	public function getPlainIdAttribute()
+	public function getPlainIdAttribute($value)
 	{
 		return $this->id;
 	}
