@@ -3,10 +3,7 @@
 @section('title', 'Details Infografik')
 
 @section('content')
-<div class="container">
-    <br />
-    <br />
-    <br />
+<div class="container py-5">
     <div class="row">
         <div class="col-lg-5">
             <img src="{{ asset('/files/infografik/' . $infographic->gambar) }}" alt="" style="width: 500px" />
@@ -16,34 +13,19 @@
             <h3>
                 <strong>{{ $infographic->judul }}</strong>
             </h3>
-            <br />
-            <div class="row">
+            <div class="row py-4">
                 <div class="col-sm-12">
                     <small class="card-title float-left">{{ $infographic->category }}</small>
                     <small class="card-title float-right">{{ $infographic->date }}</small>
                 </div>
             </div>
-            <br />
-            <p>
-                <span><strong>Jakarta</strong></span> - Memasuki era revolusi industri 4.0 yang ditandai dengan penggunaan teknologi pada otomasi dan pertukaran data secara cepat dalam segala aspek, Menteri Ketenagakerjaan Ida Fauziyah
-                meminta kalangan mahasiswa untuk terus mengembangkan soft skills dan akhlakul karimah. Karena kompetensi tanpa budi pekerti yang baik tidak akan bermanfaat.
-            </p>
-            <p>
-                "Jangan sampai image kurangnya rasa hormat dan sopan santun yang sering dialamatkan pada generasi milennial ada pada diri kalian. Jangan lupa, bijaklah dalam bersosial media," ujar Menaker Ida saat menjadi narasumber Pengenalan Budaya Akademik dan Kemahasiswaan
-                (PBAK) Tahun 2020/2021 UIN Sunan Ampel Surabaya, melalui video conference pada hari Rabu (23/9/2020).
-            </p>
-            <p>
-                Pesan kedua Menaker Ida yakni tetap bersikap rendah hati dan tidak cepat berpuas diri dan teruslah belajar dan berkembang dengan memanfaatkan segala media yang ada. Misalnya mengikuti organisasi, kompetisi, dan pelatihan kompetensi yang ada di berbagai
-                bidang.
-            </p>
-            <p>
-                "Tumbuhkanlah kedekatan dengan rakyat, karena mahasiswa adalah agent of change yang bisa membantu perubahan di masyarakat. Jangan menjadi mahasiswa di Menara gading yang hanya bangga dan sibuk dengan urusannya sendiri," katanya.
-            </p>
-            <br />
-
+            <div class="row" style="word-break: break-all;">
+                <div class="col-sm-12" style="word-break: break-all;">
+                    <p style="word-break: break-all;">{!! $infographic->content !!}</p>
+                </div>
+            </div>
             <h5><strong>Bagikan</strong></h5>
-            <br />
-            <div class="icon-share" style="word-spacing: 15px">
+            <div class="icon-share py-4" style="word-spacing: 15px">
                 <i class="fa fa-whatsapp" style="font-size: 36px; color: green"></i>
                 <i class="fa fa-facebook" style="font-size: 32px; color: #3b5998"></i>
                 <i class="fa fa-twitter" style="font-size: 34px; color: #1da1f2"></i>

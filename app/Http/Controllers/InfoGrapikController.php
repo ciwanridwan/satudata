@@ -51,10 +51,14 @@ class InfoGrapikController extends Controller
     {
         try {
             $id = Crypt::decryptString($id);
-        } catch (DecryptException $e) {
+        } catch (\Illuminate\Contracts\Encryption\DecryptException $e) {
             return redirect()->back()->withInput();
         }
-        $data['infographic'] = (object)InfoGrapik::find($id)->toArray();
+        $infographic = InfoGrapik::find($id);
+        if (!$infographic) {
+            return redirect()->back()->withInput();
+        }
+        $data['infographic'] = (object)$infographic->toArray();
         $data['infographics'] = InfoGrapik::where('id', '!=', $id)->orderBy('created_at', 'desc')->limit(3)->get()->toArray();
 
         return view('pages.details.infograpik')->with($data);
