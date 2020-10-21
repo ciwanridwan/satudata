@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\InfoGrapik;
 use App\Province;
 use App\City;
+use DecryptException;
 use Crypt;
 use DB;
 
@@ -22,6 +23,9 @@ class InfoGrapikController extends Controller
         $data['years'] = InfoGrapik::select(DB::raw('year(created_at) as year'))->groupBy(DB::raw('year(created_at)'))->pluck('year');
         if ($year) {
             $data['year'] = $year;
+            if(date('Y', strtotime($year)) == '1970') {
+                return redirect()->back()->withInput();
+            }
         }
         if ($request->q) {
             foreach (explode(' ', $request->q) as $key => $value) {
@@ -43,9 +47,17 @@ class InfoGrapikController extends Controller
         return view('pages.infograpik')->with($data);
     }
 
-    public function details()
+    public function details($id)
     {
-        return view('pages.details.infograpik');
+        try {
+            $id = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->back()->withInput();
+        }
+        $data['infographic'] = (object)InfoGrapik::find($id)->toArray();
+        $data['infographics'] = InfoGrapik::orderBy('created_at', 'desc')->limit(3)->get()->toArray();
+
+        return view('pages.details.infograpik')->with($data);
     }
 
     /**

@@ -4,10 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\KategoriInfo;
+use Crypt;
 
 class InfoGrapik extends Model
 {
-	protected $appends = ['category','date'];
+	protected $appends = ['id', 'category', 'date'];
+
+	public function getIdAttribute($value)
+	{
+		return Crypt::encryptString($value);
+	}
 
 	public function getCategoryAttribute()
 	{

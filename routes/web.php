@@ -23,9 +23,6 @@ Route::group(['prefix' => 'data'], function () {
 	
 });
 
-Route::get('details/data/{judul}', 'DataController@details')->name('page-data-details');
-Route::get('/download/{file}', 'DataController@unduhFile')->name('download-file-data');
-
 Route::group(['prefix' => 'data-{category}'], function () {
 	Route::get('/', 'DataController@category')->name('pages-category-data');
 	Route::get('{query}', 'DataController@category')->name('page-category-data-query');
@@ -41,24 +38,19 @@ Route::group(['prefix' => 'publikasi-{year}'], function () {
 	Route::get('{query}', 'PublikasiController@year')->name('page-year-publikasi-query');
 });
 
+Route::group(['prefix' => 'infograpik'], function () {
+	Route::get('/', 'InfoGrapikController@index')->name('pages-infograpik');
+	Route::get('{year}', 'InfoGrapikController@index')->name('pages.infograpik.year');
+	Route::get('{id}/details', 'InfoGrapikController@details')->name('pages.detail.infograpik');
+});
+
 Route::group(['prefix' => 'galeri'], function () {
 	Route::get('/', 'GaleryController@index')->name('pages-galery');
 	Route::get('/details/{judul}', 'GaleryController@details')->name('pages-details-galery');
 });
 
-
-Route::group(['prefix' => 'infograpik'], function () {
-	Route::get('/', 'InfoGrapikController@index')->name('pages-infograpik');
-	Route::get('/details', 'InfoGrapikController@details')->name('pages-details-infograpik');
-	Route::get('{year}', 'InfoGrapikController@index')->name('pages.infograpik.year');
-});
+Route::get('details/data/{judul}', 'DataController@details')->name('page-data-details');
 
 Route::get('about', 'AboutController@index')->name('pages-about');
 
-Route::group(['prefix' => 'user'], function () {
-	Route::get('login', 'PublicUsersController@formLogin')->name('users-login');
-	Route::get('register', 'PublicUsersController@formRegister')->name('users-register');
-});
-
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
