@@ -13,42 +13,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12 mb-4">
+      <div class="col-lg-6 mb-4">
         <form action="{{ url()->current() }}">
           <input class="form-control" type="text" name="q" placeholder="Cari Data" aria-label="Search" value="{{ !empty($_GET['q']) ? $_GET['q'] : null }}" />
         </form>
       </div>
-      <div class="col-lg-4 mb-4">
+      <div class="col-lg-6 mb-4">
         <div class="dropdown">
-          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ !empty($province) ? $province : 'Provinsi' }}</button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 400px!important;overflow: auto;">
-            @foreach($provinces as $key => $value)
-            <?php $value = (object)$value; ?>
-            <a class="dropdown-item {{ !empty($province) && $province == $value->name ? 'active' : null }}" href="{{ !empty($province) && $province == $value->name ? url('infograpik') : url('infograpik/' . $value->id) }}">{{ $value->name }}</a>
-            @endforeach
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="dropdown">
-          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <?= empty($cities) ? 'disabled' : null ?>>{{ !empty($city) ? $city : 'Kab/Kota' }}</button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            @if(!empty($cities))
-            @foreach($cities as $key => $value)
-            <?php $value = (object)$value; ?>
-            <a class="dropdown-item {{ !empty($city) && $city == $value->name ? 'active' : null }}" href="{{ !empty($city) && $city == $value->name ? url('infograpik/' . $province_id) : url('infograpik/' . $province_id . '/' . $value->id) }}">{{ $value->name }}</a>
-            @endforeach
-            @endif
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="dropdown">
-          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <?= empty($years) ? 'disabled' : null ?>>{{ !empty($year) ? $year : 'Tahun' }}</button>
+          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{ !empty($year) ? $year : 'Tahun' }}</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             @if(!empty($years))
             @foreach($years as $key => $value)
-            <a class="dropdown-item {{ !empty($year) && $year == $value ? 'active' : null }}" href="{{ !empty($year) && $year == $value ? url('infograpik/' . $province_id . '/' . $city_id) : url('infograpik/' . $province_id . '/' . $city_id . '/' . $value) }}">{{ $value }}</a>
+            <a class="dropdown-item {{ !empty($year) && $year == $value ? 'active' : null }}" href="{{ !empty($year) && $year == $value ? url('infograpik') : url('infograpik/' . $value) }}">{{ $value }}</a>
             @endforeach
             @endif
           </div>
@@ -107,7 +83,7 @@
 <br>
 <br>
 <br>
-<div class="container produk mb-8 produk-inpage-produk py-5">
+<div class="container produk mb-8 produk-inpage-produk">
   <div class="row justify-content-center produk-details">
     <div class="row justify-content-center berita-details">
       @foreach($infographics as $key => $infographic)

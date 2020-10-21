@@ -48,8 +48,9 @@ Route::group(['prefix' => 'galeri'], function () {
 
 
 Route::group(['prefix' => 'infograpik'], function () {
-	Route::get('', 'InfoGrapikController@index')->name('pages-infograpik');
+	Route::get('/', 'InfoGrapikController@index')->name('pages-infograpik');
 	Route::get('/details', 'InfoGrapikController@details')->name('pages-details-infograpik');
+	Route::get('{year}', 'InfoGrapikController@index')->name('pages.infograpik.year');
 });
 
 Route::get('about', 'AboutController@index')->name('pages-about');
