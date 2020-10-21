@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;
 use App\Ketenagakerjaan;
+use DB;
 
 class Data extends Model
 {
@@ -16,7 +17,7 @@ class Data extends Model
 		$model = new self;
 		if (!empty($category)) {
 			$category = str_replace('-', ' ', $category);
-			$id = Ketenagakerjaan::where('nama', 'like', '%' . $category . '%')->value('id');
+			$id = Ketenagakerjaan::where(DB::raw('replace(nama, "-", " ")'), $category)->value('id');
 		}
 		if (!empty($category) && empty($query)) {
 			$model = $model->where('ketenagakerjaan_id', $id);
