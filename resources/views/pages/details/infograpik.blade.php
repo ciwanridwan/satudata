@@ -51,6 +51,7 @@
         </div>
     </div>
 </div>
+@if(!empty($infographics) && count($infographics) >= 1)
 <div class="container berita">
     <div class="row section-berita">
         <div class="col-lg-10">
@@ -85,4 +86,5 @@
         @endforeach
     </div>
 </div>
+@endif
 @endsection
