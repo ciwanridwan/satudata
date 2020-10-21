@@ -87,31 +87,29 @@
 <br>
 <br>
 <div class="container produk mb-8 produk-inpage-produk">
-  <div class="row justify-content-center produk-details">
-    <div class="row justify-content-center berita-details">
-      @foreach($infographics as $key => $infographic)
-      <div class="col-lg-4 col-md-6 mt-5 mb-5">
-        <a href="{{ route('pages.detail.infograpik', $infographic->id) }}">
-          <div class="card card-produk" data-aos="fade-up" data-aos-delay="100" >
-            <img class="card-img-top" src="{{ asset('/files/infografik/' . $infographic->gambar) }}" alt="Card image cap" />
-            <div class="card-body">
-              <div class="row judul-berita">
-                <div class="col-7">
-                  <p class="card-title">{{ $infographic->category }}</p>
-                </div>
-                <div class="col-5">
-                  <p class="card-title">{{ $infographic->date }}</p>
-                </div>
+  <div class="row justify-content-center produk-details berita-details">
+    @foreach($infographics as $key => $infographic)
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
+      <a href="{{ route('pages.detail.infograpik', $infographic->id) }}">
+        <div class="card card-produk" data-aos="fade-up" data-aos-delay="100" >
+          <img class="card-img-top" src="{{ asset('/files/infografik/' . $infographic->gambar) }}" alt="Card image cap" />
+          <div class="card-body">
+            <div class="row judul-berita">
+              <div class="col-7">
+                <p class="card-title">{{ $infographic->category }}</p>
               </div>
-              <h2 class="card-text">
-                {{ $infographic->judul }}
-              </h2>
+              <div class="col-5">
+                <p class="card-title">{{ $infographic->date }}</p>
+              </div>
             </div>
+            <h2 class="card-text">
+              {{ $infographic->judul }}
+            </h2>
           </div>
-        </a>
-      </div>
-      @endforeach
+        </div>
+      </a>
     </div>
+    @endforeach
   </div>
   {{ $infographics->appends(request()->input())->links() }}
 </div>
