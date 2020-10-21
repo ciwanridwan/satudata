@@ -36,7 +36,7 @@ class Publikasi extends Model
 		$return['total'] = $model->count();
 		// dd($model->get()->toArray());
 		$return['data'] = $model->orderBy('created_at', 'desc')->orderBy('judul', 'asc')
-		->paginate(10);
+		->paginate(6);
 		return [$return['data'], $return['total']];
 	}
 
@@ -55,7 +55,7 @@ class Publikasi extends Model
 		if (!file_exists(public_path('files/'. $this->file))) {
 			return $value;
 		}
-		
+
 		$file_size = filesize(public_path('files/'. $this->file));
 
 		if ($file_size >= 1073741824) {
