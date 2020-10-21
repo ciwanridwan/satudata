@@ -59,22 +59,22 @@ Beranda
             <div class="col-lg-2"></div>
             <div class="benefit-content-description benefit-bg-2 col-lg-8" data-aos="zoom-in" data-aos-delay="100">
                 <img src="{{asset('assets/images/home/benefit-icon1.svg')}}" alt="" class="mt-4 mb-4">
-                <h1 class="mt-2 mb-2">Pembina Data</h1>
+                <h1 class="mt-2 mb-2">Pembina Data Ketenagakerjaan</h1>
                 <p>Menteri yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan</p>
                 <img src="{{asset('assets/images/home/benefit-icon2.svg')}}" alt="" class="mt-4 mb-4">
                 <h1 class="mt-2 mb-2">Pengarah</h1>
-                <p>Pejabat tinggi madya di kementerian</p>
+                <p>Pejabat Tinggi Madya pada masing-masing unit teknis di Kementerian Ketenagakerjaan</p>
                 <img src="{{asset('assets/images/home/benefit-icon3.svg')}}" alt="" class="mt-4 mb-4">
-                <h1 class="mt-2 mb-2">Walidata</h1>
-                <p>Unit kerja di kementerian yang mempunyasi tugas pengelolaan data ketenagakerjaan (Pusdatinaker)</p>
+                <h1 class="mt-2 mb-2">Walidata Ketenagakerjaan</h1>
+                <p>Unit kerja yang menyelenggarakan tugas dan fungsi di bidang pengelolaan Data <br>Ketenagakerjaan di Kementerian Ketenagakerjaan (Pusat Data dan Informasi Ketenagakerjaan)</p>
                 <img src="{{asset('assets/images/home/benefit-icon4.svg')}}" alt="" class="mt-4 mb-4">
-                <h1 class="mt-2 mb-2">Produsen Data</h1>
-                <p>Unit kerja di instansi pusat dan daerah yang menghasilkan data ketenagakerjaan:</p>
-                <Ul type="a">
+                <h1 class="mt-2 mb-2">Produsen Data Ketenagakerjaan</h1>
+                <p>Unit kerja pada Instansi Pusat dan Instansi Daerah yang menghasilkan Data Ketenagakerjaan <br>berdasarkan kewenangan sesuai dengan ketentuan peraturan perundang-undangan </p>
+                {{-- <Ul type="a">
                     <li>Unit eselon 2 kemnaker</li>
                     <li>Unit eselon 2 KL lain/ Instansi Daerah/ Lembaga atau Organisasi nasional ataupun internasional
                         yang menghasilkan data ketenagakerjaan</li>
-                </Ul>
+                </Ul> --}}
             </div>
             <div class="col-lg-2"></div>
         </div>
