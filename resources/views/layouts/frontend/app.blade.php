@@ -11,7 +11,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="{{ asset('/assets/style/main.css')}}" rel="stylesheet" />
-
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logos.ico')}}" />
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>

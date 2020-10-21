@@ -60,26 +60,32 @@
     </div>
     <!-- detail berita -->
     <div class="row berita-details">
+        @foreach ($galeriPopuler as $item)
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
-            <a href="">
+            <a href="{{route('pages-details-galery', $item->judul)}}">
                 <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <img class="card-img-top" src="{{ asset('assets/images/news/news1.png')}}" alt="Card image cap" />
+                    <img class="card-img-top" src="{{asset('storage/photos/'. $item->foto)}}" alt="Card image cap" />
                     <div class="card-body">
                         <div class="row judul-berita">
                             <div class="col-7">
-                                <p class="card-title">Kategori</p>
+                                @foreach ($kategori as $p)
+                                @if ($p->id == $item->kategori_galery_id)
+                                <p class="card-title">{{$p->nama}}</p>
+                                @endif    
+                                @endforeach
                             </div>
                             <div class="col-5">
-                                <p class="card-title">Hari, 12 bulan 2020</p>
+                                <p class="card-title">{{$item->created_at}}
                             </div>
                         </div>
                         <h2 class="card-text">
-                            BLK Pati Mengadakan Pelatihan Kopi dan ...
+                            {{$item->judul}}
                         </h2>
                     </div>
                 </div>
             </a>
         </div>
+        @endforeach
     </div>
     
     <div class="row button-galeri">
