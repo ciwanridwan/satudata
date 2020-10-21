@@ -55,7 +55,7 @@ class InfoGrapikController extends Controller
             return redirect()->back()->withInput();
         }
         $data['infographic'] = (object)InfoGrapik::find($id)->toArray();
-        $data['infographics'] = InfoGrapik::orderBy('created_at', 'desc')->limit(3)->get()->toArray();
+        $data['infographics'] = InfoGrapik::where('id', '!=', $id)->orderBy('created_at', 'desc')->limit(3)->get()->toArray();
 
         return view('pages.details.infograpik')->with($data);
     }

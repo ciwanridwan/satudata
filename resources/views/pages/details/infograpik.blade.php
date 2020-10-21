@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <h2 class="card-text">
-                            Data Pencari Kerja Kuartal 1 pada tahun 2020
+                            {{ $infographic->judul }}
                         </h2>
                     </div>
                 </div>
