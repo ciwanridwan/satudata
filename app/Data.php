@@ -4,13 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 use App\Ketenagakerjaan;
 use DB;
 
 class Data extends Model
 {
 	protected $hidden = ['id','updated_at'];
-	protected $appends = ['tahun','format_berkas','size_files'];
+	protected $appends = ['tahun','format_berkas','size_files','description'];
 
 	public static function search($query, $category = null, $request)
 	{
@@ -99,6 +100,15 @@ class Data extends Model
 			$update->update();
 
 			return $size;
+		}
+	}
+
+	public function getDescriptionAttribute()
+	{
+		if (!empty($this->abstraksi)) {
+			return Str::limit(strip_tags($this->abstraksi), 320, '...');
+		} else {
+			return Str::limit($this->isi, 320, '...');
 		}
 	}
 }
