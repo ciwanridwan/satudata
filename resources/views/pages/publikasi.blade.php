@@ -64,7 +64,7 @@
                                         <br>
                                         <small>Ukuran FIle : <span>{{ $publication->size_file }}</span></small>
                                         <br><br>
-                                        <p>{{ $publication->isi }}</p>
+                                        <p style="text-align: justify;">{{ $publication->isi }}</p>
                                     </div>
                                 </div>
                                 <div id="eris" style="height: 2px !important; width:100% !important; background-color:#002d58!important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;"></div>

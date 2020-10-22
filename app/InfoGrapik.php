@@ -8,7 +8,7 @@ use Crypt;
 
 class InfoGrapik extends Model
 {
-	protected $appends = ['id','category', 'date', 'plain_id'];
+	protected $appends = ['id','category', 'date', 'plain_id','thumbnail'];
 
 	public function getPlainIdAttribute($value)
 	{
@@ -30,4 +30,13 @@ class InfoGrapik extends Model
 		$date = \Carbon\Carbon::parse($this->attributes['created_at'])->locale('id');
 		return $date->translatedFormat('l, d M Y');
 	}
+
+	public function getThumbnailAttribute($value)
+    {
+    	if ($value) {
+    		return $value;
+    	}
+
+    	return 'files/infografik/' . str_replace('public/', null, $this->gambar);
+    }
 }
