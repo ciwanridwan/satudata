@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Galery;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,8 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         if(!empty($request->q)) return redirect(url('data/' . $request->q));
-        return view('index');
+
+        $data['latest_galeries'] = Galery::orderBy('created_at', 'desc')->limit(3)->get();
+        return view('index')->with($data);
     }
 }
