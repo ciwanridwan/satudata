@@ -34,7 +34,6 @@ class Publikasi extends Model
 			}
 		}
 		$return['total'] = $model->count();
-		// dd($model->get()->toArray());
 		$return['data'] = $model->orderBy('created_at', 'desc')->orderBy('judul', 'asc')
 		->paginate(6);
 		return [$return['data'], $return['total']];

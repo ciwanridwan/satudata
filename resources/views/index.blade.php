@@ -91,7 +91,7 @@ style="background-image: url('{{ asset('assets/images/home/benefit-bg1.jpg')  }}
             <h3><strong>Galeri Terbaru</strong></h3>
         </div>
         <div class="col-lg-2">
-            <a href="{{ url('galery') }}" class="btn btn-primary">Lihat Lebih Banyak</a>
+            <a href="{{ url('galeri') }}" class="btn btn-primary">Lihat Lebih Banyak</a>
         </div>
     </div>
     <!-- detail berita -->

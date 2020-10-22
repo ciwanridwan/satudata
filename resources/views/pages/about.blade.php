@@ -1,47 +1,23 @@
 @extends('layouts.frontend.app', ['footerPage' => ''])
 
 @section('title')
-    Tentang Kami
+Tentang Kami
 @endsection
 
 @section('content')
 <div class="container tentang-page">
-    <h1><strong>Tentang</strong></h1>
-    <div class="row mt-4">
-        <div class="col-lg-3">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Informasi Umum</a
-        >
-        <a
-          class="nav-link"
-          id="v-pills-profile-tab"
-          data-toggle="pill"
-          href="#v-pills-profile"
-          role="tab"
-          aria-controls="v-pills-profile"
-          aria-selected="false"
-          >Struktur Organisasi</a
-        >
-        <a
-          class="nav-link"
-          id="v-pills-messages-tab"
-          data-toggle="pill"
-          href="#v-pills-messages"
-          role="tab"
-          aria-controls="v-pills-messages"
-          aria-selected="false"
-          >Alamat</a
-        >
+  <h1><strong>Tentang</strong></h1>
+  <div class="row mt-4">
+    <div class="col-lg-3">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Informasi Umum</a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" >Struktur Organisasi</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" >Alamat</a>
       </div>
     </div>
     <div class="col-lg-9 mt-2">
       <div class="tab-content" id="v-pills-tabContent">
-        <div
-          class="tab-pane fade show active"
-          id="v-pills-home"
-          role="tabpanel"
-          aria-labelledby="v-pills-home-tab"
-        >
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" >
           <h1><strong>Informasi Umum</strong></h1>
           <hr />
           <p>
@@ -81,12 +57,7 @@
             pemerintah di sektor Ketenagakerjaan.
           </p>
         </div>
-        <div
-          class="tab-pane fade"
-          id="v-pills-profile"
-          role="tabpanel"
-          aria-labelledby="v-pills-profile-tab"
-        >
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
           <h1><strong>Struktur Organisasi</strong></h1>
           <hr />
           <p>
@@ -112,15 +83,10 @@
           </ol>
           <img src="{{ asset('/assets/images/tentang/struktur.png')}}" alt="" />
         </div>
-        <div
-          class="tab-pane fade"
-          id="v-pills-messages"
-          role="tabpanel"
-          aria-labelledby="v-pills-messages-tab"
-        >
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
           <h1><strong>Alamat</strong></h1>
           <hr />
-          <ol type="a">
+          <ol style="list-style: none;">
             <li>
               Alamat Kantor: Pusat Data dan Informasi Ketenagakerjaan,
               Kementerian Ketenagakerjaan, Lt. 3 Gedung A, Jl. Jend. Gatot
@@ -128,7 +94,7 @@
             </li>
             <li>Telp/Fax: 021-5273609</li>
             <li>Website: satudata.kemnaker.go.id</li>
-            <li>Layanan Permintaan Data: linda.kemnaker.go.id</li>
+            <li>Layanan Permintaan Data: lindaku.kemnaker.go.id</li>
             <li>Email: pusdatin@kemnaker.go.id</li>
             <li>
               Media Sosial:
