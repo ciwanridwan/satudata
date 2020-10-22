@@ -34,7 +34,7 @@
                     <div class="col-12 col-lg-12">
                         <h5>
                             The Nike Air Max 720 SE goes bigger than ever before with Nike's tallest Air unit yet for unimaginable, all-day comfort. There's super breathable fabrics on the upper, while colours add a modern edge.
-                            </h3>
+                            </h5>
                     </div>
                 </div>
             </div>

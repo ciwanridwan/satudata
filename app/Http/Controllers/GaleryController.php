@@ -22,8 +22,9 @@ class GaleryController extends Controller
     public function index()
     {
         $galery = Galery::orderBy('created_at', 'desc')->get();
+        $galeriPopuler = Galery::orderBy('created_at', 'asc')->get();
         $kategori = KategoriGalery::all();
-        return view('pages.galery')->with('galery', $galery)->with('kategori', $kategori);
+        return view('pages.galery')->with('galery', $galery)->with('kategori', $kategori)->with('galeriPopuler', $galeriPopuler);
     }
 
     /**

@@ -11,6 +11,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="{{ asset('/assets/style/main.css')}}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logos.ico')}}" />
 
     <script src="https://kit.fontawesome.com/231b668aca.js" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
