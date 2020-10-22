@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Galery;
 use App\KategoriGalery;
+use App\Gambar;
 use Illuminate\Http\Request;
 
 class GaleryController extends Controller
@@ -11,8 +12,14 @@ class GaleryController extends Controller
     public function details($judul)
     {
         $galery = Galery::where('judul', $judul)->first();
-        // dd($galery);
-        return view('pages.details.galery')->with('galery', $galery);
+        if (!$galery) {
+            return redirect()->back()->withInput();
+        }
+        $data['galery'] = $galery;
+        $data['images'] = Gambar::where('galery_id', $galery->id)->get();
+        $data['latest_galeries'] = Galery::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.details.galery')->with($data);
     }
     /**
      * Display a listing of the resource.
@@ -21,10 +28,10 @@ class GaleryController extends Controller
      */
     public function index()
     {
-        $galery = Galery::orderBy('created_at', 'desc')->get();
-        $galeriPopuler = Galery::orderBy('created_at', 'asc')->get();
-        $kategori = KategoriGalery::all();
-        return view('pages.galery')->with('galery', $galery)->with('kategori', $kategori)->with('galeriPopuler', $galeriPopuler);
+        $data['galeries']  = Galery::orderBy('created_at', 'desc')->paginate(9);
+        $data['popular_galeries'] = Galery::orderBy('created_at', 'asc')->paginate(9);
+
+        return view('pages.galery')->with($data);
     }
 
     /**

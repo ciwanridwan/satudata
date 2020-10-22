@@ -1,11 +1,8 @@
 @extends('layouts.frontend.app', ['footerPage' => ''])
 
-@section('title')
-    Details Galery
-@endsection
+@section('title', 'Details Galery')
 
 @section('content')
-<!-- deskripsi -->
 <div class="page-content page-details">
     <section class="store-gallery" id="gallery">
         <div class="container">
@@ -31,93 +28,48 @@
         <section class="store-description">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-12">
-                        <h5>
-                            The Nike Air Max 720 SE goes bigger than ever before with Nike's tallest Air unit yet for unimaginable, all-day comfort. There's super breathable fabrics on the upper, while colours add a modern edge.
-                            </h5>
+                    <div class="col-12 col-lg-12" style="word-break: break-all;">
+                        <h5>{!! $galery->description !!}</h5>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </div>
-<!-- detail infografis -->
 <div class="container berita">
     <div class="row section-berita">
         <div class="col-lg-10">
             <h3><strong>Galeri Terbaru</strong></h3>
         </div>
     </div>
-    <!-- detail berita -->
     <div class="row berita-details">
+        @foreach($latest_galeries as $key => $value)
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
-            <a href="produk-details.html">
+            <a href="{{ route('pages-details-galery', $value->judul) }}">
                 <div class="card">
-                    <img class="card-img-top" src="{{asset('assets/images/berita/news1.jpg')}}" alt="Card image cap" />
+                    <img class="card-img-top" src="{{ asset('files/photos/' . $value->foto) }}" alt="Card image cap" />
                     <div class="card-body">
                         <div class="row judul-berita">
                             <div class="col-7">
-                                <p class="card-title">Kategori</p>
+                                <p class="card-title">{{ $value->category }}</p>
                             </div>
                             <div class="col-5">
-                                <p class="card-title">Hari, 12 bulan 2020</p>
+                                <p class="card-title">{{ $value->date }}</p>
                             </div>
                         </div>
                         <h2 class="card-text">
-                            Data Pencari Kerja Kuartal 1 tahun 2020..
+                            {{ $value->judul }}
                         </h2>
                     </div>
                 </div>
             </a>
         </div>
-        <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="300">
-            <a href="produk-details.html">
-                <div class="card">
-                    <img class="card-img-top" src="{{asset('assets/images/berita/news2.jpg')}}" alt="Card image cap" />
-                    <div class="card-body">
-                        <div class="row judul-berita">
-                            <div class="col-7">
-                                <p class="card-title">Kategori</p>
-                            </div>
-                            <div class="col-5">
-                                <p class="card-title">Hari, 12 bulan 2020</p>
-                            </div>
-                        </div>
-                        <h2 class="card-text">Data tenaga kerja asing tahun 2019...</h2>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="400">
-            <a href="produk-details.html">
-                <div class="card">
-                    <img class="card-img-top" src="{{asset('assets/images/berita/news4.jpeg')}}" alt="Card image cap" />
-                    <div class="card-body">
-                        <div class="row judul-berita">
-                            <div class="col-7">
-                                <p class="card-title">Kategori</p>
-                            </div>
-                            <div class="col-5">
-                                <p class="card-title">Hari, 12 bulan 2020</p>
-                            </div>
-                        </div>
-                        <h2 class="card-text">
-                            Data penempatan kerja dari LPTKS 2020...
-                        </h2>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="row buttonnext text-center">
-        <a href="#" class="previous round">&#8249;</a>
-        <a href="#" class="next round">&#8250;</a>
+        @endforeach
     </div>
 </div>
 @endsection
 
-
-@section('js-galeri')
+@section('foot-content')
 <script>
     var gallery = new Vue({
         el: "#gallery",
@@ -125,20 +77,15 @@
             AOS.init();
         },
         data: {
-            activePhoto: 1,
-            photos: [{
-                id: 1,
-                url: "/assets/images/berita/news1.jpg",
-            }, {
-                id: 2,
-                url: "/assets/images/berita/news4.jpeg",
-            }, {
-                id: 3,
-                url: "/assets/images/berita/news3.jpeg",
-            }, {
-                id: 4,
-                url: "/assets/images/berita/berita4.png",
-            }, ],
+            activePhoto: 0,
+            photos: [
+            <?php foreach($images as $key => $value) { ?>
+                {
+                    id: {{ $key }},
+                    url: "{{ asset('files/photos' . $value->picture) }}",
+                }
+            <?php } ?>
+            ],
         },
         methods: {
             changeActive(id) {
