@@ -19,6 +19,7 @@ class DataSeeder extends Seeder
     		DB::table('data')->insert([
     			'judul' => $faker->name,
     			'isi' => $faker->text,
+                'abstraksi' => '<h1>' . $faker->text . '</h1>',
     			'file' => $faker->safeColorName . '.xlsx',
     			'ketenagakerjaan_id' => '1',
     			'created_at' => date('Y-m-d H:i:s'),
