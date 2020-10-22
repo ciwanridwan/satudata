@@ -14,7 +14,7 @@
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
             <a href="{{route('pages-details-galery', $item->judul)}}">
                 <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <img class="card-img-top" src="{{asset('storage/photos/'. $item->foto)}}" alt="Card image cap" />
+                    <img class="card-img-top" src="{{asset('files/photos/'. $item->foto)}}" alt="Card image cap" />
                     <div class="card-body">
                         <div class="row judul-berita">
                             <div class="col-7">
