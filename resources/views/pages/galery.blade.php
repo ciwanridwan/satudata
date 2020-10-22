@@ -41,7 +41,7 @@
             <h3><strong>Galeri Terpopuler</strong></h3>
         </div>
     </div>
-    <div class="row berita-details">
+    <div class="row justify-content-center berita-details">
         @foreach ($popular_galeries as $item)
         <div class="col-lg-4 col-md-6 mt-5 mb-5">
             <a href="{{ route('pages-details-galery', $item->judul) }}">

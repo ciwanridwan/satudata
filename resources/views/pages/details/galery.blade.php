@@ -42,7 +42,7 @@
             <h3><strong>Galeri Terbaru</strong></h3>
         </div>
     </div>
-    <div class="row berita-details">
+    <div class="row justify-content-center berita-details">
         @foreach($latest_galeries as $key => $value)
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
             <a href="{{ route('pages-details-galery', $value->judul) }}">

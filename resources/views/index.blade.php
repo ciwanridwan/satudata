@@ -88,14 +88,14 @@ style="background-image: url('{{ asset('assets/images/home/benefit-bg1.jpg')  }}
 <div class="container berita">
     <div class="row section-berita">
         <div class="col-lg-10">
-            <h3><strong>Gallery Terbaru</strong></h3>
+            <h3><strong>Galeri Terbaru</strong></h3>
         </div>
         <div class="col-lg-2">
-            <a href="" class="btn btn-primary">Lihat Lebih Banyak</a>
+            <a href="{{ url('galery') }}" class="btn btn-primary">Lihat Lebih Banyak</a>
         </div>
     </div>
     <!-- detail berita -->
-    <div class="row berita-details">
+    <div class="row justify-content-center berita-details">
         @foreach($latest_galeries as $key => $value)
         <div class="col-lg-4 col-md-6 mt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
             <a href="{{ route('pages-details-galery', $value->judul) }}">
