@@ -82,7 +82,7 @@
             <?php foreach($images as $key => $value) { ?>
                 {
                     id: {{ $key }},
-                    url: "{{ asset('files/photos' . $value->picture) }}",
+                    url: "{{ asset('files/photos/' . $value->picture) }}",
                 },
             <?php } ?>
             ],
