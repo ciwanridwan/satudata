@@ -113,8 +113,8 @@ class Data extends Model
 	}
 
 	public static function purgeString($string) {
+		$string = html_entity_decode($string);
 		$string = strip_tags($string);
-		$string = preg_replace('/[[:^print:]]/', null, $string);
 		return $string;
 	}
 }
