@@ -106,9 +106,15 @@ class Data extends Model
 	public function getDescriptionAttribute()
 	{
 		if (!empty($this->abstraksi)) {
-			return Str::limit(strip_tags($this->abstraksi), 320, '...');
+			return Str::limit(self::purgeString($this->abstraksi), 320, '...');
 		} else {
-			return Str::limit($this->isi, 320, '...');
+			return Str::limit(self::purgeString($this->isi), 320, '...');
 		}
+	}
+
+	public static function purgeString($string) {
+		$string = strip_tags($string);
+		$string = preg_replace('/[[:^print:]]/', null, $string);
+		return $string;
 	}
 }
