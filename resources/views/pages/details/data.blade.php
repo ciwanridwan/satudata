@@ -47,10 +47,8 @@ Details Data
                                     Ukuran File: <span><strong>{{$data->size_files}}</strong></span>
                                 </small>
                                 <br /><br />
-                                @if(file_exists(urldecode(asset('storage/files/'. $data->file))))
                                 <a href="{{ urldecode(asset('storage/files/'. $data->file)) }}" id="" class="btn btn-success" download>Unduh</a>
                                 <br /><br />
-                                @endif
                                 <p><strong>Abstraksi</strong></p>
                                 <ul>
                                     {!! $data->abstraksi !!}
