@@ -9,7 +9,7 @@
 <!-- navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark" id="navbar_top">
     <a class="navbar-brand" href="{{url('/')}}"
-    ><img src="{{ asset('/assets/images/logo-navbar.png')}}" alt=""
+    ><img style="width: 83px;height: 80px;" src="{{ asset('/assets/images/logo-navbar.png')}}" alt=""
   /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
