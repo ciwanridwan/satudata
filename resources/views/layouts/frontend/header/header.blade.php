@@ -32,7 +32,7 @@
                     <b> <a class="nav-link" href="{{ route('pages-galery')}}">Galeri</a></b>
                 </li>
                 <li class="nav-item nav-item-left">
-                    <b> <a class="nav-link" href="https://lindaku.kemnaker.go.id">Permintaan Data</a></b>
+                    <b> <a class="nav-link" target="_blank" href="https://lindaku.kemnaker.go.id">Permintaan Data</a></b>
                 </li>
                 <li class="nav-item nav-item-left">
                     <b> <a class="nav-link" href="https://satudata.kemnaker.go.id">Pengisian Data</a></b>
