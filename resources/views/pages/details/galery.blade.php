@@ -11,6 +11,17 @@
                     <transition name="slide-fade" mode="out-in">
                         <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" class="w-100 main-image" alt="" />
                     </transition>
+                    <div class="store-details-container" data-aos="fade-up">
+                        <section class="store-description">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10" style="word-break: break-all;">
+                                        <h5>{!! $galery->description !!}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="row">
@@ -24,17 +35,6 @@
             </div>
         </div>
     </section>
-    <div class="store-details-container" data-aos="fade-up">
-        <section class="store-description">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-12" style="word-break: break-all;">
-                        <h5>{!! $galery->description !!}</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
 </div>
 <div class="container berita">
     <div class="row section-berita">
