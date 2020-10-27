@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\KategoriGalery;
+use App\Gambar;
 
 class Galery extends Model
 {
@@ -18,5 +19,15 @@ class Galery extends Model
 	{
 		$date = \Carbon\Carbon::parse($this->attributes['created_at'])->locale('id');
 		return $date->translatedFormat('l, d M Y');
+	}
+
+	public function getFotoAttribute($value)
+	{
+		$picture = Gambar::where('galery_id', $this->id)->first();
+		if ($picture) {
+			return $picture->picture;
+		}
+
+		return $value;
 	}
 }
