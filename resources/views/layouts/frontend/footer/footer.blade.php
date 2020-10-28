@@ -8,10 +8,10 @@
                 <p>Jl. Jendral Gatot Subroto Kav. 51, Daerah Khusus <br>Ibukota Jakarta 12750, Indonesia</p>
             </div>
             <div class="col-6 icon-footer-left">
-                <a href=""><img src="{{asset('/assets/images/icon-instagram.png')}}" alt=""></a>
-                <a href=""><img src="{{asset('/assets/images/icon-facebook.png')}}" alt=""></a>
-                <a href=""><img src="{{asset('/assets/images/icon-twiter.png')}}" alt=""></a>
-                <a href=""><img src="{{asset('/assets/images/icon-youtube.png')}}" alt=""></a>
+                <a href="https://www.instagram.com/kemnaker/?hl=id" target="_blank"><img src="{{asset('/assets/images/icon-instagram.png')}}" alt=""></a>
+                <a href="https://web.facebook.com/KemnakerRI/?_rdc=1&_rdr" target="_blank"><img src="{{asset('/assets/images/icon-facebook.png')}}" alt=""></a>
+                <a href="https://twitter.com/KemnakerRI?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="{{asset('/assets/images/icon-twiter.png')}}" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCXX-orbQDc0LVXhVB1I0K3g" target="_blank"><img src="{{asset('/assets/images/icon-youtube.png')}}" alt=""></a>
             </div>
         </div>
         <div class="row info-perusahaan">
