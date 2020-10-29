@@ -7,25 +7,25 @@
     <section class="store-gallery" id="gallery">
         <div class="container">
             <div class="row margin-details">
-                <div class="store-details-container col-lg-12" data-aos="fade-up">
+                <div class="store-details-container col-lg-12 form-group" data-aos="fade-up">
                     <section class="store-description">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12" style="word-break: break-all;">
-                                    <h5>{!! $galery->description !!}</h5>
+                                <div class="col-lg-12 form-group" style="word-break: break-all;">
+                                    <h5 class="font-weight-bold">{!! $galery->description !!}</h5>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
-                <div class="col-lg-12" data-aos="zoom-in">
+                <div class="col-lg-12 form-group" data-aos="zoom-in">
                     <transition name="slide-fade" mode="out-in">
                         <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" class="w-100 main-image" alt="" />
                     </transition>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 form-group">
                     <div class="row">
-                        <div class="col-3 col-lg-3 mt-2 mt-lg-0" v-for="(photo, index) in photos" :key="photo.id" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="col-1 col-lg-1 mt-2 mt-lg-0" v-for="(photo, index) in photos" :key="photo.id" data-aos="zoom-in" data-aos-delay="100">
                             <a href="#" @click="changeActive(index)">
                                 <img :src="photo.url" alt="" class="w-100 thumbnail-image" :class="{ active: index == activePhoto}" />
                             </a>
