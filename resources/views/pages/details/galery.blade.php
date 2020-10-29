@@ -59,7 +59,7 @@
                             </div>
                         </div>
                         <h2 class="card-text">
-                            {{ \Illuminate\Support\Str::limit($value->judul, 45, '...') }}
+                            {{ \Illuminate\Support\Str::limit($value->judul, 40, '...') }}
                         </h2>
                     </div>
                 </div>
