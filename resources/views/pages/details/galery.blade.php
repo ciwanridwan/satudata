@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-lg-12 form-group">
                     <div class="row">
-                        <div class="col-1 col-lg-1 mt-2 mt-lg-0" v-for="(photo, index) in photos" :key="photo.id" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="col-2 col-lg-2 mt-2 mt-lg-0" v-for="(photo, index) in photos" :key="photo.id" data-aos="zoom-in" data-aos-delay="100">
                             <a href="#" @click="changeActive(index)">
                                 <img :src="photo.url" alt="" class="w-100 thumbnail-image" :class="{ active: index == activePhoto}" />
                             </a>
