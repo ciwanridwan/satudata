@@ -7,23 +7,23 @@
     <section class="store-gallery" id="gallery">
         <div class="container">
             <div class="row margin-details">
-                <div class="col-lg-10" data-aos="zoom-in">
+                <div class="store-details-container col-lg-12" data-aos="fade-up">
+                    <section class="store-description">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12" style="word-break: break-all;">
+                                    <h5>{!! $galery->description !!}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-lg-12" data-aos="zoom-in">
                     <transition name="slide-fade" mode="out-in">
                         <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" class="w-100 main-image" alt="" />
                     </transition>
-                    <div class="store-details-container" data-aos="fade-up">
-                        <section class="store-description">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-10" style="word-break: break-all;">
-                                        <h5>{!! $galery->description !!}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-12">
                     <div class="row">
                         <div class="col-3 col-lg-12 mt-2 mt-lg-0" v-for="(photo, index) in photos" :key="photo.id" data-aos="zoom-in" data-aos-delay="100">
                             <a href="#" @click="changeActive(index)">
