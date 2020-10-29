@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
     <title>Satudata - @yield('title')</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="{{ asset('/assets/style/main.css')}}" rel="stylesheet" />
     <link rel="shortcut icon" href="{{ asset('/assets/images/logos.ico')}}" />
+    <link href="http://sharingbuttons.io" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/jssocials.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/jssocials-theme-flat.css')}}" />
+
 
     <script src="https://kit.fontawesome.com/231b668aca.js" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -136,9 +141,17 @@
             }]
         });
     </script>
+    <script src="{{ asset('/js/jquery.js')}}"></script>
+    <script src="{{ asset('/js/jssocials.min.js')}}"></script>
     <script src="{{asset('/assets/vendor/chart/canvasjs.min.js')}}"></script>
     <script src="{{asset('/assets/vendor/chart/jquery.canvasjs.min.js')}}"></script>
+    <script>
+        $("#share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+        });
+    </script>
     @yield('foot-content')
     @yield('js-data')
 </body>
+
 </html

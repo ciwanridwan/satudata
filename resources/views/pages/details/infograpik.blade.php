@@ -25,10 +25,14 @@
                 </div>
             </div>
             <h5><strong>Bagikan</strong></h5>
-            <div class="icon-share py-4" style="word-spacing: 15px">
-                <i class="fa fa-whatsapp" style="font-size: 36px; color: green"></i>
-                <i class="fa fa-facebook" style="font-size: 32px; color: #3b5998"></i>
-                <i class="fa fa-twitter" style="font-size: 34px; color: #1da1f2"></i>
+            <div class="icon-share py-4" style="word-spacing: 15px" id="">
+                <a href="whatsapp://send?text=Silahkan Cek website kami https://satudata.kemnaker.go.id"
+                data-action="share/whatsapp/share" target="_blank">
+                <i class="fa fa-whatsapp" style="font-size: 36px; color: green"></i> </a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsatudata.kemnaker.go.id" target="_blank" rel="noopener" aria-label="Share on Facebook" id="">
+                <i class="fa fa-facebook" style="font-size: 32px; color: #3b5998"></i> </a>
+                <a href="https://twitter.com/intent/tweet/?text={{strip_tags($infographic->content)}}&amp;url=https%3A%2F%2Fsatudata.kemnaker.go.id" target="_blank" rel="noopener" aria-label="Share on Twitter">
+                <i class="fa fa-twitter" style="font-size: 34px; color: #1da1f2"></i> </a>
             </div>
         </div>
     </div>
