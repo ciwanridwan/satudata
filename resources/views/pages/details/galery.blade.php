@@ -22,6 +22,7 @@
                     <transition name="slide-fade" mode="out-in">
                         <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" class="w-100 main-image" alt="" />
                     </transition>
+                    <hr>
                 </div>
                 <div class="col-lg-12 form-group">
                     <div class="row">
