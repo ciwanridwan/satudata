@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <h2 class="card-text">
-                            {{ $item->judul }}
+                            {{ \Illuminate\Support\Str::limit($item->judul, 45, '...') }}
                         </h2>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <h2 class="card-text">
-                            {{ $item->judul }}
+                            {{ \Illuminate\Support\Str::limit($item->judul, 45, '...') }}
                         </h2>
                     </div>
                 </div>
