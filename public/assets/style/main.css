@@ -10842,7 +10842,7 @@ footer .alamat {
 }
 
 footer .alamat p {
-  font-size: 13px;
+  font-size: 17px;
 }
 
 @media (min-width: 992px) {
@@ -10863,7 +10863,7 @@ footer .alamat img {
 }
 
 footer .info-perusahaan {
-  font-size: 13px;
+  font-size: 17px;
   margin-top: 10px;
 }
 
@@ -10884,7 +10884,7 @@ footer .garis-footer {
 }
 
 footer .hak-cipta p {
-  font-size: 13px;
+  font-size: 17px;
   margin-top: 10px;
 }
 
