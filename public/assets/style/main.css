@@ -10832,7 +10832,7 @@ footer .logo-footer {
 }
 
 footer .logo-footer img {
-  width: 180px;
+  width: 190px;
   height: auto;
 }
 
@@ -10842,7 +10842,7 @@ footer .alamat {
 }
 
 footer .alamat p {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 @media (min-width: 992px) {
@@ -10863,7 +10863,7 @@ footer .alamat img {
 }
 
 footer .info-perusahaan {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
@@ -10884,7 +10884,7 @@ footer .garis-footer {
 }
 
 footer .hak-cipta p {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
@@ -10980,7 +10980,7 @@ footer .hak-cipta p {
 }
 
 .jumbotron {
-  background-image: url("/assets/images/home/jumbotron-b.jpg");
+  background-image: url("/assets/images/home/bg.png");
   background-size: cover;
   opacity: 1;
   width: 100%;

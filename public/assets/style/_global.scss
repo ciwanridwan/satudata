@@ -7,8 +7,8 @@ footer {
     color: #ffffff;
     .logo-footer {
         padding-top: 20px !important;
-        img{
-            width: 180px;
+        img {
+            width: 190px;
             height: auto;
         }
     }
@@ -16,7 +16,7 @@ footer {
         width: 100%;
         margin-top: 30px;
         p {
-            font-size: 13px;
+            font-size: 15px;
         }
         @include media-breakpoint-up(lg) {
             img {
@@ -29,13 +29,13 @@ footer {
             }
         }
         img {
-            width: 30px;
+            width: 45px;
             height: auto;
             padding-left: 5px;
         }
     }
     .info-perusahaan {
-        font-size: 13px;
+        font-size: 15px;
         margin-top: 10px;
         .col-lg-3 {
             text-align: left;
@@ -53,7 +53,7 @@ footer {
     }
     .hak-cipta {
         p {
-            font-size: 13px;
+            font-size: 15px;
             margin-top: 10px;
         }
     }

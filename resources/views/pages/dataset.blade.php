@@ -127,34 +127,28 @@
 <footer class="footer-bottom">
     <div class="container">
         <div class="row mt-4 mb-4 logo-footer">
-            <img src="{{ asset('/assets/images/logo-navbar.png')}}" alt="">
-        </div>
-        <div class="row alamat">
-            <div class="col-6">
-                <p>Jl. Jendral Gatot Subroto Kav. 51, Daerah Khusus <br>Ibukota Jakarta 12750, Indonesia</p>
+            <div class="col-lg-4">
+                <img src="{{asset('assets/images/logo-navbar.png')}}" alt="">
+                <p style="text-align: justify;">Satu Data Ketenagakerjaan dimaksudkan untuk mengatur penyelenggaraan
+                    tatakelola Data Ketenagakerjaan yang dihasilkan oleh Instansi Pusat dan Instansi Daerah agar
+                    pengelolaan dan pengembangan data ketenagakerjaan memenuhi prinsip-prinsip
+                    Satu Data Indonesia.</p>
             </div>
-            <div class="col-6 icon-footer-left">
-                <a href=""><img src="{{ asset('/assets/images/icon-instagram.png')}}" alt=""></a>
-                <a href=""><img src="{{ asset('/assets/images/icon-facebook.png')}}" alt=""></a>
-                <a href=""><img src="{{ asset('/assets/images/icon-twiter.png')}}" alt=""></a>
-                <a href=""><img src="{{ asset('/assets/images/icon-youtube.png')}}" alt=""></a>
-            </div>
-        </div>
-        <div class="row info-perusahaan">
-            <div class="col-lg-3">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3" style="margin-top:153px;">
                 <p>Telp: 089-8765432</p>
-            </div>
-            <div class="col-lg-3">
                 <p>Call Center: 089-8765432</p>
-            </div>
-            <div class="col-lg-2">
                 <p>Tentang Satudata</p>
-            </div>
-            <div class="col-lg-2">
                 <p>Hubungi Kami</p>
-            </div>
-            <div class="col-lg-2">
                 <p>Peta Situs</p>
+            </div>
+            <div class="col-lg-4 alamat" style="margin-top:153px;">
+                <p>Jl. Jendral Gatot Subroto Kav. 51, Daerah Khusus <br>Ibukota Jakarta 12750, Indonesia</p>
+                <br>
+                <a href=""><img src="{{asset('assets/images/icon-instagram.png')}}" alt=""></a>
+                <a href=""><img src="{{asset('assets/images/icon-facebook.png')}}" alt=""></a>
+                <a href=""><img src="{{asset('assets/images/icon-twiter.png')}}" alt=""></a>
+                <a href=""><img src="{{asset('assets/images/icon-youtube.png')}}" alt=""></a>
             </div>
         </div>
         <div class="row">
