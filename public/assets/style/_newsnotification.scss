@@ -11,14 +11,30 @@
         color: #6fb1f1;
         opacity: 1;
         padding: 6px 8px 6px 12px;
-        a {
-            text-decoration: none;
-            text-align: left;
-            letter-spacing: 0.36px;
-            color: #c1ddf8;
-            opacity: 1;
-            font-size: 12px;
-            margin-left: 12px;
+    }
+    a {
+        text-decoration: none;
+        text-align: left;
+        letter-spacing: 0.36px;
+        color: #c1ddf8;
+        opacity: 1;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    .marquee {
+        position: relative;
+        box-sizing: border-box;
+        animation: marquee 10s linear infinite;
+    }
+    .marquee:hover {
+        animation-play-state: paused;
+    }
+    @keyframes marquee {
+        0% {
+            top: 2em;
+        }
+        100% {
+            top: -10em;
         }
     }
 }

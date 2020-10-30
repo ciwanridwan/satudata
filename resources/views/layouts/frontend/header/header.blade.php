@@ -3,7 +3,7 @@
         News flash
         @if(!empty($news_flash))
         @foreach($news_flash as $key => $value)
-        <a href="{{ $value->url }}">{{ $value->title }}</a>
+        <a href="{{ $value->url }}" class="marquee"> <span> {{ $value->title }} </span></a>
         @endforeach
         @endif
     </p>

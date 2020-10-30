@@ -141,7 +141,7 @@
             }]
         });
     </script>
-    <script src="{{ asset('/js/jquery.js')}}"></script>
+    {{-- <script src="{{ asset('/js/jquery.js')}}"></script> --}}
     <script src="{{ asset('/js/jssocials.min.js')}}"></script>
     <script src="{{asset('/assets/vendor/chart/canvasjs.min.js')}}"></script>
     <script src="{{asset('/assets/vendor/chart/jquery.canvasjs.min.js')}}"></script>

@@ -4,7 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -10842,11 +10842,7 @@ footer .alamat {
 }
 
 footer .alamat p {
-<<<<<<< HEAD
   font-size: 15px;
-=======
-  font-size: 17px;
->>>>>>> 290231c6652e01d1285c721353e78d7928630eac
 }
 
 @media (min-width: 992px) {
@@ -10861,17 +10857,13 @@ footer .alamat p {
 }
 
 footer .alamat img {
-  width: 30px;
+  width: 45px;
   height: auto;
   padding-left: 5px;
 }
 
 footer .info-perusahaan {
-<<<<<<< HEAD
   font-size: 15px;
-=======
-  font-size: 17px;
->>>>>>> 290231c6652e01d1285c721353e78d7928630eac
   margin-top: 10px;
 }
 
@@ -10892,11 +10884,7 @@ footer .garis-footer {
 }
 
 footer .hak-cipta p {
-<<<<<<< HEAD
   font-size: 15px;
-=======
-  font-size: 17px;
->>>>>>> 290231c6652e01d1285c721353e78d7928630eac
   margin-top: 10px;
 }
 
@@ -10917,7 +10905,7 @@ footer .hak-cipta p {
   padding: 6px 8px 6px 12px;
 }
 
-.news-notification p a {
+.news-notification a {
   text-decoration: none;
   text-align: left;
   letter-spacing: 0.36px;
@@ -10925,6 +10913,37 @@ footer .hak-cipta p {
   opacity: 1;
   font-size: 12px;
   margin-left: 12px;
+}
+
+.news-notification .marquee {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: marquee 10s linear infinite;
+          animation: marquee 10s linear infinite;
+}
+
+.news-notification .marquee:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    top: 2em;
+  }
+  100% {
+    top: -10em;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    top: 2em;
+  }
+  100% {
+    top: -10em;
+  }
 }
 
 .navbar {
@@ -11544,5 +11563,22 @@ footer {
 
 .tentang-page .nav-pills .active {
   background-color: #002d58;
+}
+
+.slide-fade-enter-active {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-active {
+  -webkit-transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0.5;
 }
 /*# sourceMappingURL=main.css.map */
