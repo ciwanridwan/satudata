@@ -10842,7 +10842,11 @@ footer .alamat {
 }
 
 footer .alamat p {
+<<<<<<< HEAD
   font-size: 15px;
+=======
+  font-size: 17px;
+>>>>>>> 290231c6652e01d1285c721353e78d7928630eac
 }
 
 @media (min-width: 992px) {
@@ -10863,7 +10867,11 @@ footer .alamat img {
 }
 
 footer .info-perusahaan {
+<<<<<<< HEAD
   font-size: 15px;
+=======
+  font-size: 17px;
+>>>>>>> 290231c6652e01d1285c721353e78d7928630eac
   margin-top: 10px;
 }
 
@@ -10884,7 +10892,11 @@ footer .garis-footer {
 }
 
 footer .hak-cipta p {
+<<<<<<< HEAD
   font-size: 15px;
+=======
+  font-size: 17px;
+>>>>>>> 290231c6652e01d1285c721353e78d7928630eac
   margin-top: 10px;
 }
 

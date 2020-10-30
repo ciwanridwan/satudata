@@ -111,7 +111,7 @@ style="background-image: url('{{ asset('assets/images/home/benefit-bg1.jpg')  }}
                             </div>
                         </div>
                         <h2 class="card-text">
-                            {{ $value->judul }}
+                            {{ \Illuminate\Support\Str::limit($value->judul, 40, '...') }}
                         </h2>
                     </div>
                 </div>
