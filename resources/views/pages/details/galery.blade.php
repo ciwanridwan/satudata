@@ -12,7 +12,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 form-group" style="word-break: break-all;">
-                                    <h5 class="font-weight-bold">{!! $galery->description !!}</h5>
+                                    <h1 class="font-weight-bold">{!! $galery->description !!}</h1>
                                 </div>
                             </div>
                         </div>
