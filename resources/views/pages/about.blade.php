@@ -94,7 +94,7 @@ Tentang Kami
             </li>
             <li>Telp/Fax: 021-5273609</li>
             <li>Website: satudata.kemnaker.go.id</li>
-            <li>Layanan Permintaan Data: lindaku.kemnaker.go.id</li>
+            <li>Layanan Permintaan Data: linda.kemnaker.go.id</li>
             <li>Email: pusdatin@kemnaker.go.id</li>
             <li>
               Media Sosial:
