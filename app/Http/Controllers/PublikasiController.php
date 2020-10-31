@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Publikasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Data;
+use App\InfoGrapik;
 
 class PublikasiController extends Controller
 {
@@ -47,6 +49,22 @@ class PublikasiController extends Controller
         }
         $data['years'] = Publikasi::select(DB::raw('year(created_at) as year'))->groupBy(DB::raw('year(created_at)'))->pluck('year');
         list($data['publications'], $data['total']) = Publikasi::search($query, null, $request);
+
+        $news_flash = [];
+        $get_data = Data::orderBy('created_at', 'desc')->first();
+        if ($get_data) {
+            $news_flash[] = (object)['title' => $get_data->judul, 'url' => route('page-data-details', $get_data->judul)];
+        }
+        $get_infographic = InfoGrapik::orderBy('created_at', 'desc')->first();
+        if ($get_infographic) {
+            $news_flash[] = (object)['title' => $get_infographic->judul, 'url' => route('pages.detail.infograpik', $get_infographic->id)];
+        }
+        $get_publication = Publikasi::orderBy('created_at', 'desc')->first();
+        if ($get_publication) {
+            $news_flash[] = (object)['title' => $get_publication->judul, 'url' => route('pages-publikasi')];
+        }
+        $data['news_flash'] = $news_flash;
+
         return view('pages.publikasi')->with($data);
     }
 

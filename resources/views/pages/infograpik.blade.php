@@ -103,7 +103,7 @@
               </div>
             </div>
             <h2 class="card-text">
-              {{ $infographic->judul }}
+              {{ \Illuminate\Support\Str::limit($infographic->judul, 40, '...') }}
             </h2>
           </div>
         </div>
