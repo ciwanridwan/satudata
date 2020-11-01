@@ -6,7 +6,7 @@
 <div class="container py-5">
     <div class="row">
         <div class="col-lg-5">
-            <img src="{{ asset('/files/infografik/' . $infographic->gambar) }}" alt="" style="width: 500px" />
+            <img class="img-fluid form-group" src="{{ asset('/files/infografik/' . $infographic->gambar) }}" alt="" style="width: 500px" />
         </div>
         <div class="col-lg-1"></div>
         <class class="col-lg-6">
