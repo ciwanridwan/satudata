@@ -55,8 +55,9 @@
                             <div class="list-group">
                                 @foreach($publications as $key => $publication)
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
-                                        <img src="{{ url($publication->thumbnail) }}" class="form-group" style="width: 129px; max-height: 187px;">
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center form-group">
+                                        <img src="{{ url($publication->thumbnail) }}" style="width: 129px; max-height: 187px;">
+                                        <br>
                                         <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success" style="margin-top: 5px; width: 129px;">Unduh</a>
                                     </div>
                                     <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
