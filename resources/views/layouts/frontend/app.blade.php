@@ -16,7 +16,12 @@
     <link href="http://sharingbuttons.io" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/jssocials.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/jssocials-theme-flat.css')}}" />
-
+    <style type="text/css">
+        div.page-content.news-notification {
+            overflow-x: hidden!important;
+            overflow-y: hidden!important;
+        }
+    </style>
 
     <script src="https://kit.fontawesome.com/231b668aca.js" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
