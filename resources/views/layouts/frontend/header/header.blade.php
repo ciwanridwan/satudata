@@ -40,7 +40,7 @@
                 <b> <a class="nav-link" target="_blank" href="https://linda.kemnaker.go.id">Permintaan Data</a></b>
             </li>
             <li class="nav-item nav-item-left">
-                <b> <a class="nav-link" href="https://satudata.kemnaker.go.id">Pengisian Data</a></b>
+                <b> <a class="nav-link" target="_blank" href="http://old.satudata.kemnaker.go.id">Pengisian Data</a></b>
             </li>
             <li class="nav-item {{ Request::segment(1) == 'about' ? 'active' : null }} nav-item-left">
                 <b> <a class="nav-link" href="{{ route('pages-about')}}">Tentang Kami</a></b>
