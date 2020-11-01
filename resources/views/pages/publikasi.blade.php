@@ -37,15 +37,16 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-12 row form-group">
+                                <div class="col-12 row">
                                     <label for="inputPassword" class="col-md-2 col-form-label">Kata Kunci :</label>
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 form-group">
                                         <input type="text" class="form-control" id="InputKataKunci" placeholder="Masukkan Kata Kunci" name="q" value="{{ !empty($query) ? $query : null }}">
                                     </div>
-                                    <button type="submit" class="btn btn-success">Cari Publikasi</button>
+                                    <div class="col-md-5 form-group">
+                                        <button type="submit" class="btn btn-success">Cari Publikasi</button>
+                                    </div>
                                 </div>
                             </form>
-                            <br><br>
                             <div class="container">
                                 <div class="alert alert-dark alert-important" role="alert">
                                     Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> dataset
@@ -54,11 +55,11 @@
                             <div class="list-group">
                                 @foreach($publications as $key => $publication)
                                 <div class="col-md-12 row" style="border-bottom: 1px #002d58!important;">
-                                    <div class="col-2">
-                                        <img src="{{ url($publication->thumbnail) }}" alt="" style="width: 129px; max-height: 187px;">
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
+                                        <img src="{{ url($publication->thumbnail) }}" class="form-group" style="width: 129px; max-height: 187px;">
                                         <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success" style="margin-top: 5px; width: 129px;">Unduh</a>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                         <p><strong>{{ $publication->judul }}</strong></p>
                                         <small>Tanggal Rilis : <span>{{ $publication->date }}</span></small>
                                         <br>
@@ -93,7 +94,7 @@
                 <p style="text-align: justify;">Satu Data Ketenagakerjaan dimaksudkan untuk mengatur penyelenggaraan
                     tatakelola Data Ketenagakerjaan yang dihasilkan oleh Instansi Pusat dan Instansi Daerah agar
                     pengelolaan dan pengembangan data ketenagakerjaan memenuhi prinsip-prinsip
-                    Satu Data Indonesia.</p>
+                Satu Data Indonesia.</p>
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-3" style="margin-top:153px;">
