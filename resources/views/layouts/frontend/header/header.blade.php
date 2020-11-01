@@ -1,9 +1,9 @@
-<div class="page-content news-notification">
+<div class="page-content news-notification" style="white-space: nowrap;">
     <p>
         News flash
         @if(!empty($news_flash))
         @foreach($news_flash as $key => $value)
-        <a href="{{ $value->url }}" class="marquee" style="{{ $key != 0 ? 'margin-left: 94px;' : null  }}"> <span> {{ $value->title }} </span></a>
+        <a href="{{ $value->url }}" class="marquee" style="{{ $key != 0 ? 'margin-left: 91.5px;' : null  }}"> <span> {{ $value->title }} </span></a>
         @if($key != count($news_flash) -1)
         <br>
         @endif
