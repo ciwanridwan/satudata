@@ -12,7 +12,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="{{ asset('/assets/style/main.css')}}" rel="stylesheet" />
-    <link rel="shortcut icon" href="{{ asset('/assets/images/logos.ico')}}" />
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logo-data2.ico')}}" />
     <link href="http://sharingbuttons.io" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/jssocials.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/jssocials-theme-flat.css')}}" />
