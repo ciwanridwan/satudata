@@ -19,9 +19,9 @@
                     <small class="card-title float-right">{{ $infographic->date }}</small>
                 </div>
             </div>
-            <div class="row" style="word-break: break-all;">
-                <div class="col-sm-12" style="word-break: break-all;">
-                    <p style="word-break: break-all;">{!! $infographic->content !!}</p>
+            <div class="row table-responsive">
+                <div class="col-sm-12">
+                    <p>{!! $infographic->content !!}</p>
                 </div>
             </div>
             <h5><strong>Bagikan</strong></h5>
