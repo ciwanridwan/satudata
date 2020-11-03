@@ -10,8 +10,8 @@
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-3" style="margin-top:153px;">
-                <p>Telp: 089-8765432</p>
-                <p>Call Center: 089-8765432</p>
+                <p>Telp: 021-5255733</p>
+                <p>Call Center: 021-50816000</p>
                 <p>Tentang Satudata</p>
                 <p>Hubungi Kami</p>
                 <p>Peta Situs</p>

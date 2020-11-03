@@ -76,7 +76,7 @@
                             </button>
                         </div>
                         <div class="alert alert-dark alert-important" role="alert">
-                            Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> dataset
+                            Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> Data
                         </div>
                         <p class="filter-list"></p>
                     </form>
@@ -136,8 +136,8 @@
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-3" style="margin-top:153px;">
-                <p>Telp: 089-8765432</p>
-                <p>Call Center: 089-8765432</p>
+                <p>Telp: 021-5255733</p>
+                <p>Call Center: 021-50816000</p>
                 <p>Tentang Satudata</p>
                 <p>Hubungi Kami</p>
                 <p>Peta Situs</p>
@@ -162,61 +162,3 @@
     </div>
 </footer>
 @endsection
-{{-- <div class="input-group input-group-lg">
-    <input aria-label="{{ !empty($query) ? $query : 'Masukan kata kunci pencarian' }}"
-    id="field-giant-search" type="text" class="form-control form-lg" name="q" aria-describedby="button-addon2"
-    autocomplete="off" placeholder="{{ !empty($query) ? $query : 'Masukan kata kunci pencarian' }}"
-    value="{{ !empty($query) ? $query : null }}">
-</div><br />
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">Sortir Berdasarkan</label>
-    </div>
-    <select class="custom-select" id="inputGroupSelect01" name="sort">
-        <option value="score desc, metadata_modified desc" selected="selected">Relevansi</option>
-        <option value="title_string asc">Nama Dataset A-Z</option>
-        <option value="title_string desc">Nama Dataset Z-A</option>
-        <option value="metadata_modified desc">Terakhir Diperbaharui</option>
-    </select>
-    <div class="input-group-append">
-        <button class="btn btn-secondary ericsnth-button-nomtop" type="submit">Go</button>
-    </div>
-</div>
-<div class="alert alert-dark alert-important" role="alert">
-    Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> dataset
-</div>
-<p class="filter-list">
-</p>
-</form>
-<div class="list-group">
-    @foreach($datas as $key => $data)
-    <div class="col-md-12" style="border-bottom: 1px #fff!important;">
-        <a href="/dataset/fraksi-fraksi-dprd-kabupaten-bantul"
-        style="font-size:18px !important;">{{ $data->judul }}</a><br />
-        <small>{{ date('Y-m-d', strtotime($data->created_at)) }} - {{ $data->isi }} </small><br />
-        <small o="/dataset/fraksi-fraksi-dprd-kabupaten-bantul" data-format="{{ $data->format_berkas }}"><span
-            class="badge badge-secondary">{{ strtoupper($data->format_berkas) }}</span></small>
-        </div>
-        <div id="eris"
-        style="height: 2px !important; width:100% !important; background-color:#ffff !important;opacity:0.1 !important;margin-top:10px;margin-bottom:10px;">
-    </div>
-    @endforeach
-</div>
-<br />
-<div aria-label="Page navigation example">
-    <ul class="pagination justify-content-end">
-        <li class="page-item">
-            <a class="page-link" href="?page=1" style="color: #15406a;">Berikutnya</a>
-        </li>
-    </ul>
-</div>
-</section>
-<section class="module">
-    <div class="module-content">
-    </div>
-</section>
-</div>
-</div>
-</div>
-</div>
-@endsection --}}

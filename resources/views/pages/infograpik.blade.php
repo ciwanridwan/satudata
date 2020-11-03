@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-12">
           <div class="alert alert-dark alert-important" role="alert">
-            Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> dataset
+            Menampilkan <span id="total_dataser">{{ !empty($total) ? $total : 0 }}</span> Infograpik
           </div>
         </div>
       </div>
