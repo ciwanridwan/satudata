@@ -95,10 +95,10 @@
           <img class="card-img-top" src="{{ asset($infographic->thumbnail) }}" style="object-fit: cover;" alt="Card image cap" />
           <div class="card-body">
             <div class="row judul-berita">
-              <div class="col-7">
+              <div class="col-6">
                 <p class="card-title">{{ $infographic->category }}</p>
               </div>
-              <div class="col-5">
+              <div class="col-6 text-right">
                 <p class="card-title">{{ $infographic->date }}</p>
               </div>
             </div>

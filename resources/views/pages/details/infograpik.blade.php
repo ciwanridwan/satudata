@@ -55,10 +55,10 @@
                     <img class="card-img-top" src="{{ asset($value->thumbnail) }}" style="object-fit: cover;" alt="Card image cap" />
                     <div class="card-body">
                         <div class="row judul-berita">
-                            <div class="col-7">
+                            <div class="col-6">
                                 <p class="card-title">{{ $value->category }}</p>
                             </div>
-                            <div class="col-5">
+                            <div class="col-6 text-right">
                                 <p class="card-title">{{ $value->date }}</p>
                             </div>
                         </div>
