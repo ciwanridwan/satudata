@@ -11,7 +11,7 @@
         <form method="GET" action="{{ url()->current() }}">
             <div class="form-group mb-3">
                 <input type="text" class="form-control" id="e_keyword" placeholder="Masukan kata kunci pencarian ..."
-                name="q">
+                name="q" style="height: 45px">
             </div>
             <button type="submit" class="btn btn-success">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none"
