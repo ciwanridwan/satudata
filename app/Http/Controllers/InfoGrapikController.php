@@ -20,7 +20,8 @@ class InfoGrapikController extends Controller
     public function index(Request $request, $year = null)
     {
         $query = new InfoGrapik;
-        $data['years'] = InfoGrapik::select(DB::raw('year(created_at) as year'))->groupBy(DB::raw('year(created_at)'))->pluck('year');
+        // $data['years'] = InfoGrapik::select(DB::raw('year(created_at) as year'))->groupBy(DB::raw('year(created_at)'))->pluck('year');
+        $data['years'] = InfoGrapik::select(DB::raw('year(created_at) as year'))->orderBy('created_at', 'desc')->pluck('year');
         if ($year) {
             $data['year'] = $year;
             if(date('Y', strtotime($year)) == '1970') {
