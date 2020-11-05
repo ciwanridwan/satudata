@@ -43,7 +43,7 @@ class InfoGrapikController extends Controller
             }
         }
         $data['total'] = $query->count();
-        $data['infographics'] = $query->orderBy('created_at', 'desc')paginate(9);
+        $data['infographics'] = $query->orderBy('created_at', 'desc')->paginate(9);
 
         return view('pages.infograpik')->with($data);
     }
