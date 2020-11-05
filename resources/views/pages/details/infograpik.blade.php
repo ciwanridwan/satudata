@@ -19,7 +19,7 @@
                     <small class="card-title float-right">{{ $infographic->date }}</small>
                 </div>
             </div>
-            <div class="row table-responsive">
+            <div class="row table-responsive" style="text-align: justify;">
                 <div class="col-sm-12">
                     <p>{!! $infographic->content !!}</p>
                 </div>
