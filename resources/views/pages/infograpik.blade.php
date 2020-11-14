@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app', ['footerPage' => ''])
 
-@section('title', 'Infograpik')
+@section('title', 'Infografik')
 
 @section('head')
 
