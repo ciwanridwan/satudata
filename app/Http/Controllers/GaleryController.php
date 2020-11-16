@@ -3,18 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Galery;
+use App\GaleryLog;
 use App\KategoriGalery;
 use App\Gambar;
 use Illuminate\Http\Request;
 
 class GaleryController extends Controller
 {
-    public function details($judul)
+    public function details($judul, Request $request)
     {
         $galery = Galery::where('judul', $judul)->first();
         if (!$galery) {
             return redirect()->back()->withInput();
         }
+
+        // Add galery log
+        $galeryLog = new GaleryLog();
+        $galeryLog->galery_id = $galery->id;
+        $galeryLog->save();
+
         $data['galery'] = $galery;
         $data['images'] = Gambar::where('galery_id', $galery->id)->get();
         $data['latest_galeries'] = Galery::orderBy('created_at', 'desc')->limit(3)->get();
