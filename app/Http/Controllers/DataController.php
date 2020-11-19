@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Storage;
 
 class DataController extends Controller
 {
+    public function dataDownloader()
+    {
+        // $totalDownload = $_POST['total_download'];
+        $totalDownload = Data::all();
+        $totalDownload->increment('total_download');
+        return $totalDownload;
+    }
+
     public function unduhFile($file)
     {
         $file = Data::where('file', $file)->first();
