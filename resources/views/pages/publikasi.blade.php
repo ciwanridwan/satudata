@@ -58,7 +58,7 @@
                                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center form-group">
                                         <img src="{{ url($publication->thumbnail) }}" style="width: 129px; max-height: 187px;">
                                         <br>
-                                        <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success" style="margin-top: 5px; width: 129px;">Unduh</a>
+                                        <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success" id="totalDownloader" style="margin-top: 5px; width: 129px;">Unduh</a>
                                     </div>
                                     <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                         <p><strong>{{ $publication->judul }}</strong></p>
@@ -124,4 +124,11 @@
         </div>
     </div>
 </footer>
+@endsection
+
+@section('js-total-download-publikasi')
+<script>
+    var totalDownloader = <?php echo $total_download; ?>;
+    document.getElementById("totalDownloader") = totalDownloader;
+</script>
 @endsection

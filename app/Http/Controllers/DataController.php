@@ -22,7 +22,7 @@ class DataController extends Controller
     public function details($judul)
     {
         $data = Data::where('judul', $judul)->first();
-        // dd($data->abstraksi);
+        $data->increment('total_download');
         return view('pages.details.data')->with('data', $data);
     }
     /**

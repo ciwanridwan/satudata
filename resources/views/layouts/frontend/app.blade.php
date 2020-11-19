@@ -43,6 +43,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('/assets/vendor/vue/vue.js')}}"></script>
     @yield('js-download')
+    @yield('js-total-download')
+    @yield('js-total-download-publikasi')
     <script>
         AOS.init();
     </script>
