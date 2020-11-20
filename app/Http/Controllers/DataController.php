@@ -6,22 +6,22 @@ use Illuminate\Http\Request;
 use App\Ketenagakerjaan;
 use App\Data;
 use DB;
+use Illuminate\Support\Facades\DB as FacadesDB;
 use Illuminate\Support\Facades\Storage;
 
 class DataController extends Controller
 {
-    public function dataDownloader()
+    public function dataDownloader($judul)
     {
-        // $totalDownload = $_POST['total_download'];
-        $totalDownload = Data::all();
+        $totalDownload = Data::where('judul', $judul)->first();
         $totalDownload->increment('total_download');
-        return $totalDownload;
+        return response()->json($totalDownload);
     }
 
     public function unduhFile($file)
     {
         $file = Data::where('file', $file)->first();
-        return response()->download(asset('storage/app/public/files/'. $file->file));
+        return response()->download(asset('storage/app/public/files/' . $file->file));
         // $path = Storage::disk('public')->get($file);
         // return response()->download($path);
         // $file_path = public_path('files/' . $file);
@@ -30,7 +30,7 @@ class DataController extends Controller
     public function details($judul)
     {
         $data = Data::where('judul', $judul)->first();
-        $data->increment('total_download');
+        // $totalDownload = $data->increment('total_download');
         return view('pages.details.data')->with('data', $data);
     }
     /**

@@ -47,7 +47,8 @@ Details Data
                                     Ukuran File: <span><strong>{{$data->size_files}}</strong></span>
                                 </small>
                                 <br /><br />
-                                <a href="{{ urldecode(asset('files/'. $data->file)) }}" id="totalDownload" class="btn btn-success" download>Unduh</a>
+                                <a href="{{ urldecode(asset('files/'. $data->file)) }}" id="totalDownload" onclick="addTotalDownload()"
+                                    class="btn btn-success" download>Unduh</a>
                                 <br /><br />
                                 <p><strong>Abstraksi</strong></p>
                                 <ul>
@@ -127,7 +128,19 @@ Details Data
 @section('js-total-download')
 
 <script>
-var totalDownloader = <?php echo $data; ?>;
-document.getElementById("totalDownloader") = totalDownloader;
+    function addTotalDownload(){
+            var xhr = new XMLHttpRequest();
+            var url = "{{url('total-download-data/'.$data->judul)}}";
+            xhr.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("totalDownload");
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+// var totalDownloader = <?php echo $data; ?>;
+// document.getElementById("totalDownloader") = totalDownloader;
+
 </script>
 @endsection
