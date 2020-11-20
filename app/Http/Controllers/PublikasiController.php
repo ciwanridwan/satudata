@@ -28,6 +28,13 @@ class PublikasiController extends Controller
         }
     }
 
+    public function publicationDownloader($judul)
+    {
+        $totalDownload = Publikasi::where('judul', $judul)->first();
+        $totalDownload->increment('total_download');
+        return response()->json($totalDownload);
+    }
+
     public function index(Request $request, $query = null, $category = null)
     {
         if ($this->back) {
@@ -64,8 +71,6 @@ class PublikasiController extends Controller
             $news_flash[] = (object)['title' => $get_publication->judul, 'url' => route('pages-publikasi')];
         }
         $data['news_flash'] = $news_flash;
-        $totalDownload = DB::table('publikasis')->increment('total_download');
-        $data['total_download'] = $totalDownload;
 
         return view('pages.publikasi')->with($data);
     }

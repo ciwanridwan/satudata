@@ -139,8 +139,5 @@ Details Data
             xhr.open("GET", url, true);
             xhr.send();
         }
-// var totalDownloader = <?php echo $data; ?>;
-// document.getElementById("totalDownloader") = totalDownloader;
-
 </script>
 @endsection

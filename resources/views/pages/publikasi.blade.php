@@ -65,7 +65,7 @@
                                             style="width: 129px; max-height: 187px;">
                                         <br>
                                         <a href="{{ url('files/' . $publication->file) }}" class="btn btn-success"
-                                            id="totalDownloader" style="margin-top: 5px; width: 129px;">Unduh</a>
+                                            id="totalDownload" onclick="addTotalDownload()" style="margin-top: 5px; width: 129px;">Unduh</a>
                                     </div>
                                     <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                         <p><strong>{{ $publication->judul }}</strong></p>
@@ -137,7 +137,16 @@
 
 @section('js-total-download-publikasi')
 <script>
-    var totalDownloader = <?php echo $total_download; ?>;
-    document.getElementById("totalDownloader") = totalDownloader;
+function addTotalDownload(){
+            var xhr = new XMLHttpRequest();
+            var url = "{{url('total-download-publikasi/'.$publication->judul)}}";
+            xhr.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("totalDownload");
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
 </script>
 @endsection

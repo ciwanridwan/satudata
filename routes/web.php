@@ -50,6 +50,7 @@ Route::group(['prefix' => 'galeri'], function () {
 });
 
 Route::get('details/data/{judul}', 'DataController@details')->name('page-data-details');
+Route::get('total-download-publikasi/{judul}', 'PublikasiController@publicationDownloader');
 Route::get('total-download-data/{judul}', 'DataController@dataDownloader');
 
 Route::get('about', 'AboutController@index')->name('pages-about');
