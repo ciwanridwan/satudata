@@ -79,7 +79,10 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('storage') => public_path('satudata-admin/storage/app/public'),
+        public_path('files') => public_path('satudata-admin/storage/app/public/files'),
+        public_path('infograpiks') => public_path('satudata-admin/storage/app/public/infograpiks'),
+        public_path('monevs') => public_path('satudata-admin/storage/app/public/monevs'),
+        public_path('photos') => public_path('satudata-admin/storage/app/public/photos'),
     ],
 
 ];
