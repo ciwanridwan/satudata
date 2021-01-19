@@ -1,0 +1,3 @@
+[submodule "public/satudata-admin"]
+	path = public/satudata-admin
+	url = https://github.com/ciwanridwan/satudata-admin.git

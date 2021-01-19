@@ -51,7 +51,7 @@
 </head>
 <body>
 	<div class="flex-center position-ref full-height">
-		<div class="message" style="padding: 10px;">
+		<div class="code">
 			Under Construction
 		</div>
 	</div>

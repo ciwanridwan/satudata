@@ -1,6 +1,12 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
+
+        <Files .env>
+            Order allow,deny
+            Deny from all
+        </Files>
+        
     </IfModule>
 
     RewriteEngine On
