@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Banner;
 use Illuminate\Http\Request;
 use App\Galery;
 use App\Data;
 use App\InfoGrapik;
 use App\Publikasi;
 use App\Visitor;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -195,6 +197,9 @@ class HomeController extends Controller
         $data['news_flash'] = $news_flash;
 
         $data['latest_galeries'] = Galery::orderBy('created_at', 'desc')->limit(3)->get();
-        return view('index')->with($data)->with('visitor', $visitor);
+
+        // Banner
+        $banner = Banner::all();
+        return view('index')->with($data)->with('visitor', $visitor)->with('banner', $banner);
     }
 }
