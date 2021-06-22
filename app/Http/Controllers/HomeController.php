@@ -40,7 +40,16 @@ class HomeController extends Controller
 
     public function userAgent()
     {
-        $u_agent     = $_SERVER['HTTP_USER_AGENT'];
+	if(empty($_SERVER['HTTP_USER_AGENT'])) {
+	return array(
+            'userAgent' => '',
+            'name'      => '',
+            'version'   => '',
+            'platform'  => '',
+            'pattern'   => ''
+        );
+	}
+        $u_agent = $_SERVER['HTTP_USER_AGENT'];
         $bname       = 'Unknown';
         $platform     = 'Unknown';
         $version     = "";
@@ -97,7 +106,9 @@ class HomeController extends Controller
         } elseif (preg_match('/Netscape/i', $u_agent)) {
             $bname = 'Netscape';
             $ub = "Netscape";
-        }
+        } else {
+	    $ub = '';
+	}
 
         //  finally get the correct version number
         $known = array('Version', $ub, 'other');
