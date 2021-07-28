@@ -159,6 +159,7 @@
     </script>
     @yield('foot-content')
     @yield('js-data')
+    @stack('first-slide')
 </body>
 
 </html
