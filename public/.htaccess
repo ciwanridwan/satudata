@@ -24,4 +24,14 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^satudata\.kemnaker\.go\.id$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.satudata\.kemnaker\.go\.id$
+RewriteRule ^/?$ "https\:\/\/satudata\.kemnaker\.go\.id" [R=301,L]
+
+#    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,QSA]
+
 </IfModule>
